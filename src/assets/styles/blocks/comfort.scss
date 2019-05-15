@@ -1,0 +1,140 @@
+.comfort{
+  padding: 70px 0;
+
+  @include tablets($tablets){
+
+    padding: 70px 0 0 0 ;
+
+  }
+}
+
+.comfort__container{
+  width: 100vw;
+  min-height: 606px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 70px 0 70px 10%;
+  background: url(./assets/images/img/app-img.jpg) no-repeat top right;
+  background-size: 35%;
+
+
+  @include tablets($tablets){
+    padding: 70px 5% 70px 5%;
+  }
+
+  @include phones($phones){
+    background-size: 0;
+  }
+
+}
+
+.comfort__title{
+  line-height: 59px;
+  font-size: 36px;
+  color: #000000;
+  max-width: 370px;
+
+  @include tablets($tablets){
+    font-size: 22px;
+    line-height: 29px;
+  }
+}
+
+.comfort__desc{
+  line-height: 36px;
+  font-size: 22px;
+  color: #000000;
+  max-width: 688px;
+
+
+  @include tablets($tablets){
+    font-size: 14px;
+  }
+
+
+}
+
+.comfort__phones-img{
+  display: none;
+  @include phones($phones){
+    display: flex;
+    height: 240px;
+    width: 100%;
+    background: url(./assets/images/img/app-img.jpg) no-repeat center center;
+    background-size: 55%;
+    margin-bottom: 40px;
+  }
+
+}
+
+.comfort__download{
+  display: flex;
+  flex-flow: column;
+  width: 50%;
+
+  @include phones($phones){
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-right: 20px;
+  }
+}
+
+.comfort__list{
+  display: flex;
+  height: 59px;
+  width: 45%;
+
+  @include interval($interval) {
+    width: 65% ;
+
+  }
+
+
+  @include tablets($tablets){
+    width: 100%;
+  }
+}
+
+.comfort__store-apple{
+  background: svg-load('apple.svg', fill=$blue) center center no-repeat;
+  background-size: 100%;
+  display: block;
+  width: 177px;
+  height: 100%;
+  transition:  0.4s ease-in-out;
+  margin-right: 35px;
+
+
+  &:hover{
+    background: svg-load('apple.svg', fill=$darkgray) center center no-repeat;
+    background-size: 100%;
+  }
+}
+
+.comfort__store-google{
+  background: svg-load('google.svg', fill=$blue) center center no-repeat;
+  display: block;
+  background-size: 100%;
+  width: 177px;
+  height: 100%;
+  transition:  0.4s ease-in-out;
+
+  &:hover{
+    background: svg-load('google.svg', fill=$darkgray) center center no-repeat;
+    background-size: 100%;
+  }
+}
+
+.comfort__title_gray{
+  @include OpenSans-Regular;
+  font-size: 18px;
+  color: $darkgray;
+  margin-bottom: 14px;
+
+
+  @include tablets($tablets){
+    font-size: 14px;
+  }
+}

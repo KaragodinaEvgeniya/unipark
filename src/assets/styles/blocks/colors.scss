@@ -1,0 +1,49 @@
+.colors__label{
+  @include form-label;
+}
+
+.colors__list{
+  margin-bottom: 13px;
+
+}
+input[type='checkbox']:checked + .colors__checkbox-icon{
+  background: $blue;
+  border: 0;
+}
+
+.colors__item{
+  margin-bottom: 13px;
+}
+
+.colors__checkbox-icon{
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(128, 128, 128, 0.8);
+  border-radius: 2px;
+  text-align: center;
+  vertical-align: bottom;
+  background: white;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.colors__checkbox-color{
+  width: 30px;
+  height: 17px;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.colors__checkbox-svg{
+  width: 12px;
+  height: 9px;
+  fill: none;
+}
+
+.colors__checkbox-color_border{
+  border: 1px solid #909090
+}

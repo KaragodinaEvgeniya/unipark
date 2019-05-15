@@ -1,0 +1,41 @@
+extends ../auth.layout.pug
+
+block content
+    .wrapper
+        include ../common/header.pug
+        .content
+            .panel__phones
+                .panel__content.panel__content_done
+                    .panel__done
+                        .panel__done-svg
+                        .panel__text
+                            span Поздравляем!
+                            span.panel__done_sub Вы успешно зарегистрировались
+                    .panel__single-btn
+                        a.panel__btn-blue.panel__btn-blue_step-4(href='/index.html')
+                            span Вернуться на главную
+            .container.content__container.panel
+                .panel__header
+                    .panel__header-pic
+                        +image('../images/img/car-icon.png')
+                    .panel__header-title
+                        span Регистрация поставщика
+                    ul.panel__header-steps.steps.steps__list
+                        li.steps__item
+                            span
+                                +icon('done','steps__done')
+                        li.steps__item
+                            span
+                                +icon('done','steps__done')
+                        li.steps__item.steps__item_active
+                            span
+                                +icon('done','steps__done')
+                .panel__content.panel__content_done
+                    .panel__done
+                        .panel__done-svg
+                        .panel__text
+                            span Поздравляем!
+                            span.panel__done_sub Вы успешно зарегистрировались
+                    .panel__single-btn
+                        a.panel__btn-blue.panel__btn-blue_step-4(href='/index.html')
+                            span Вернуться на главную

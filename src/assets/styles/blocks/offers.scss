@@ -1,0 +1,173 @@
+.offers{
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+
+  &.offers--close{
+     display: none;
+   }
+
+  @include phones($phones){
+    padding-top: 0;
+  }
+}
+
+.offers__list{
+  margin-top: 21px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+
+  @include desktop($desktop){
+    justify-content: center;
+  }
+
+  @include interval($interval){
+    justify-content: space-between;
+  }
+
+  @include tablets($tablets){
+   justify-content: center;
+  }
+
+  @include phones($phones){
+    justify-content: center;
+    margin-top: 0;
+  }
+
+
+}
+
+.offers__item{
+  border: 1px solid $gray;
+  border-radius: 5px;
+  width: 31%;
+  min-height: 352px ;
+  overflow: hidden;
+  transition: box-shadow .3s;
+  margin: 0 0  28px;
+
+  &:hover{
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25)
+  }
+
+  @include desktop($desktop){
+    width: 48%;
+    margin: 0 2% 20px ;
+  }
+
+  @include interval($interval){
+    width: 31%;
+    margin: 0 0  20px;
+  }
+
+  @include tablets($tablets){
+    min-width: 250px;
+    width: 45%;
+    margin: 0 2% 20px ;
+  }
+
+  @include phones($phones){
+    width: 90%;
+    margin: 0 0 20px ;
+  }
+}
+
+.offers__item-photo{
+  width: 100%;
+  height: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+
+  img{
+    width: 100%;
+    height:100%;
+  }
+}
+
+
+
+.offers__favorite{
+  width: 25px;
+  height: 25px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  position: absolute;
+  top: 14px;
+  right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &_active > .offers__icon{
+    fill: #FFC806;
+  }
+
+}
+
+.offers__icon{
+  width: 80%;
+  height: 80%;
+}
+
+.offers__item-card{
+  padding: 20px 27px;
+}
+
+.offers__item-info{
+  margin-bottom:  15px;
+}
+
+.offers__item-title{
+  font-weight: bold;
+  font-size: 14px;
+  color: $black;
+}
+
+.offers__item-rating{
+  display: flex;
+  margin: 5px 0;
+}
+
+.ofers__stars{
+  padding: 0 8px 0 0
+}
+
+.offers__item-price-subtext{
+  font-size: 10px;
+  color: $darkgray;
+}
+
+.offers__item-price-text {
+  font-weight: bold;
+  line-height: normal;
+  font-size: 20px;
+  color: $blue;
+}
+
+.ofers__btn.btn{
+  @include btn;
+  min-height: 40px;
+  font-size: 12px;
+  padding: 10px;
+  min-width: initial;
+  background: $lightgrey;
+  color: $black;
+  &:hover{
+    background: $blue;
+    color: $white;
+  }
+}
+
+
+
+
+
+

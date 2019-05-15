@@ -1,0 +1,39 @@
+.accordion
+    ul.accordion__list
+        li.accordion__item(id='color')
+            .accordion__dropdownlink Цвет
+            .accordion__icon(id='color-open')
+            .accordion__submenuItems-list(id='color-list')
+                include colors.pug
+        li.accordion__item(id='quantity')
+            .accordion__dropdownlink Количество посадочных мест
+            .accordion__icon(id='quantity-open')
+            .accordion__submenuItems-list(id='quantity-list')
+                .accordion__from-till
+                    select.accordion__select(name='from_year')
+                        option(value='' disabled selected hidden) от
+                        option(value='2') 10
+                        option(value='2') 12
+                    .accordion__select-line
+                        svg.accordion__select-line-icon
+                            line(y1="0.5" x2="15" y2="0.5" stroke="#B8C1CB")
+                    select.accordion__select(name='till_year')
+                        option(value='' disabled selected hidden) до
+                        option(value='1') 14
+                        option(value='2') 15
+        li.accordion__item(id='price')
+            .accordion__dropdownlink Цена за час
+            .accordion__icon(id='price-open')
+            .accordion__submenuItems-list(id='price-list')
+                .filter__range-inputs
+                    .filter__range.slider.slider__block.slider__block--slider
+                        include slider.pug
+                    .filter__from-till
+                        input#min-price.filter__input.filter__input_range(type='number' name='min_price' value='10000' data-min-price='0')
+                        .filter__select-line
+                            svg.filter__select-line-icon
+                                line(y1="0.5" x2="15" y2="0.5" stroke="#B8C1CB")
+                        input#max-price.filter__input.filter__input_range(type='number' name='max_price' value='100000' data-max-price='100000')
+    .accordion__btn
+        input(type='submit' value='Сбросить').accordion__btn-white
+        input(type='submit' value='Найти').accordion__btn-blue

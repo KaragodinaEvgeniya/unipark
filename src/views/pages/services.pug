@@ -1,0 +1,65 @@
+extends ../auth.layout.pug
+
+block content
+    .wrapper
+        .services
+            include ../common/header.pug
+            .container.services.services__container
+                .services__main-title
+                    span НАШИ УСЛУГИ
+                ul.services__list
+                    li.services__item
+                        a.services__link.services__link_without-driver(href='#')
+                            .services__text
+                                .services__title
+                                    span Авто без водителя
+                                .services__count
+                                    span 424
+                                .services__subtext
+                                    span количество транспорта
+                    li.services__item
+                        a.services__link.services__link_with-driver(href='#')
+                            .services__text
+                                .services__title
+                                    span Авто С водителем
+                                .services__count
+                                    span 648
+                                .services__subtext
+                                    span количество транспорта
+                    li.services__item
+                        a.services__link.services__link_tractor(href='#')
+                            .services__text
+                                .services__title
+                                    span Аренда спецтехники
+                                .services__count
+                                    span 424
+                                .services__subtext
+                                    span количество транспорта
+                    li.services__item
+                        a.services__link.services__link_van(href='#')
+                            .services__text
+                                .services__title
+                                    span Развозка сотрудников
+                                .services__count
+                                    span 217
+                                .services__subtext
+                                    span количество транспорта
+                    li.services__item
+                        a.services__link.services__link_vans(href='#')
+                            .services__text
+                                .services__title
+                                    span ТРАНСФЕР
+                                .services__count
+                                    span 647
+                                .services__subtext
+                                    span количество транспорта
+                    li.services__item
+                        a.services__link.services__link_cortege(href='#')
+                            .services__text
+                                .services__title
+                                    span Свадебные кортежи
+                                .services__count
+                                    span 401
+                                .services__subtext
+                                    span количество транспорта
+            include ../common/footer.pug

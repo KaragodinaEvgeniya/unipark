@@ -1,0 +1,296 @@
+extends ../auth.layout.pug
+
+block content
+    .wrapper
+        .car
+            include ../common/header.pug
+            .container.car__container
+                ul.car__breadcrumbs.breadcrumbs.breadcrumbs__list
+                    li.breadcrumbs__item
+                        a(href='#').breadcrumbs__link Автомобили
+                    li.breadcrumbs__item
+                        a(href='#').breadcrumbs__link.breadcrumbs__link_active Mercedes-Benz G450 (500DDD01)
+                .car__content
+                    .car__info
+                        .car__slider
+                            .car__slider-container.swiper-container.gallery-top
+                                .car__slider-wrapper.swiper-wrapper(id='slider-car')
+                                    .car__slide.swiper-slide.car-active(id='slide1')
+                                        +image('../images/img/mers-1.jpg')
+                                    .car__slide.swiper-slide(id='slide2')
+                                        +image('../images/img/mers-2.jpg')
+                                    .car__slide.swiper-slide(id='slide3')
+                                        +image('../images/img/mers-3.jpg')
+                                    .car__slide.swiper-slide(id='slide4')
+                                        +image('../images/img/mers-4.jpg')
+                                    .car__slide.swiper-slide(id='slide5')
+                                        +image('../images/img/mers-5.jpg')
+                                    .car__slide.swiper-slide(id='slide6')
+                                        +image('../images/img/mers-4.jpg')
+                                button.car__slide-next(id='button-next')
+                                    .car__button-icon
+                                button.car__slide-prev(id='button-prev')
+                                    .car__button-icon-left
+                            .swiper-container.gallery-thumbs(id='nav-slider')
+                                .swiper-wrapper
+                                    .car__thumb-slide.swiper-slide
+                                        +image('../images/img/mers-1.jpg')
+                                    .car__thumb-slide.swiper-slide
+                                        +image('../images/img/mers-2.jpg')
+                                    .car__thumb-slide.swiper-slide
+                                        +image('../images/img/mers-3.jpg')
+                                    .car__thumb-slide.swiper-slide
+                                        +image('../images/img/mers-4.jpg')
+                                    .car__thumb-slide.swiper-slide
+                                        +image('../images/img/mers-5.jpg')
+                                    .car__thumb-slide.swiper-slide
+                                        + image('../images/img/mers-4.jpg')
+                        .car__sidebar-info.car__sidebar-info_tablets
+                            .car__sidebar-list.offers-list.offers-list__info.offers-list__info_car
+                                .offers-list__title
+                                    span Mercedes-Benz G450 (500DDD01)
+                                .offers-list__driver-name
+                                    span Абельдинов Азамат
+                                .offers-list__rating.rating
+                                    .rating__star(id='rateYo' data-rateyo-rating="3")
+                                    span.offers-list__sub-text (23 голоса)
+                                .offers-list__city
+                                    +icon('placemark-2','car__placemark-2')
+                                    span город:
+                                        span Астана (компания Unipark)
+                                .offers-list__price
+                                    span 15 000 тг.
+                                    span.offers-list__sub-text /час
+                                .offers-list__text-info
+                                    .offers-list__title.offers-list__title_black
+                                        span Описание
+                                    .offers-list__desc
+                                        p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                .offers-list__btns-row
+                                    a#checkout-link(href='#').offers-list__btns-blue.offers-list__btns-blue_car Оформить заказ
+                                    a(href='#').offers-list__btns-white.offers-list__btns-white_car В избранное
+                        .car__desc
+                            .car__specs
+                                .car__specs-title
+                                    span Технические характеристики
+                                ul.car__specs-list
+                                    li.car__specs-item
+                                        .car__specs-icon
+                                            +icon('year','car__icon')
+                                        .car__specs-name
+                                            span Год выпуска
+                                        .car__specs-value
+                                            span 2012
+                                    li.car__specs-item
+                                        .car__specs-icon
+                                            +icon('seets','car__icon')
+                                        .car__specs-name
+                                            span Посадочных мест
+                                        .car__specs-value
+                                            span 12
+                                    li.car__specs-item
+                                        .car__specs-icon
+                                            +icon('brush-2','car__icon')
+                                        .car__specs-name
+                                            span Цвет
+                                        .car__specs-value
+                                            span Черный
+                                    li.car__specs-item
+                                        .car__specs-icon
+                                            +icon('weight','car__icon')
+                                        .car__specs-name
+                                            span Грузоподъемность
+                                        .car__specs-value
+                                            span 250 кг.
+                                    li.car__specs-item
+                                        .car__specs-icon
+                                            +icon('engine-2','car__icon')
+                                        .car__specs-name
+                                            span Тип двигателя
+                                        .car__specs-value
+                                            span Бензин
+                                    li.car__specs-item
+                                        .car__specs-icon
+                                            +icon('calendar-2','car__icon')
+                                        .car__specs-name
+                                            span Дата тех. осмотра
+                                        .car__specs-value
+                                            span 12.09.2019
+                            .car__specs
+                                .car__specs-title
+                                    span Услуги
+                                ul.car__specs-list
+                                    li.car__specs-item
+                                        .car__specs-icon
+                                            +icon('car-without-driver','car__icon')
+                                        .car__specs-name
+                                            span Авто без водителя
+                                        .car__specs-icon
+                                            +icon('plus','car__icon')
+                                    li.car__specs-item
+                                        .car__specs-icon
+                                            +icon('transfer','car__icon')
+                                        .car__specs-name
+                                            span Трансфер
+                                        .car__specs-icon
+                                            +icon('plus','car__icon')
+                                    li.car__specs-item
+                                        .car__specs-icon
+                                            +icon('car-with-driver','car__icon')
+                                        .car__specs-name
+                                            span Авто с водителем
+                                        .car__specs-icon
+                                            +icon('minus','car__icon')
+                                    li.car__specs-item
+                                        .car__specs-icon
+                                            +icon('wedding','car__icon')
+                                        .car__specs-name
+                                            span Свадебный кортеж
+                                        .car__specs-icon
+                                            +icon('plus','car__icon')
+                    .car__sidebar
+                        .car__sidebar-info
+                            .car__sidebar-list.offers-list.offers-list__info.offers-list__info_car
+                                .offers-list__title
+                                    span Mercedes-Benz G450 (500DDD01)
+                                .offers-list__driver-name
+                                    span Абельдинов Азамат
+                                .offers-list__rating.rating
+                                    .rating__star(id='rateYo' data-rateyo-rating="3")
+                                    span.offers-list__sub-text (23 голоса)
+                                .offers-list__city
+                                    +icon('placemark-2','car__placemark-2')
+                                    span город:
+                                        span Астана (компания Unipark)
+                                .offers-list__price
+                                    span 15 000 тг.
+                                    span.offers-list__sub-text /час
+                                .offers-list__text-info
+                                    .offers-list__title.offers-list__title_black
+                                        span Описание
+                                    .offers-list__desc
+                                        p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                .offers-list__btns-row
+                                    a#checkout-link(href='#').offers-list__btns-blue.offers-list__btns-blue_car Оформить заказ
+                                    a(href='#').offers-list__btns-white.offers-list__btns-white_car В избранное
+                        .car__related
+                            .car__related-title
+                                span Похожие транспорты
+                            ul.car__related-list
+                                li.car__related-item
+                                    a(href='#').car__related-link
+                                        +image('../images/img/mers-1.jpg')
+                                        .car__related-info
+                                            span.car__related-info_next-line Mercedes-Benz G450
+                                            span.car__related-info_bold 15 000 тг.
+                                            span.car__related-info_subtext /час
+                                li.car__related-item
+                                    a(href='#').car__related-link
+                                        +image('../images/img/mers-4.jpg')
+                                        .car__related-info
+                                            span.car__related-info_next-line Mercedes-Benz G450
+                                            span.car__related-info_bold 15 000 тг.
+                                            span.car__related-info_subtext /час
+                .car__reviews
+                    .car__reviews-slider.reviews.reviews_car
+                        .car__reviews-title
+                            span Отзывы
+                        .reviews__buttons.reviews__buttons_car
+                            a.reviews__prev.reviews__prev_car(href='#')
+                                .reviews__button-icon-left.reviews__button-icon-left_car
+                            a.reviews__next.reviews__next_car(href='#')
+                                .reviews__button-icon.reviews__button-icon_car
+                        .reviews__container.reviews__container_car.container
+                            .reviews__wrapper.swiper-wrapper
+                                .reviews__car-slide.swiper-slide
+                                    .reviews__car-single
+                                        .reviews__car-info
+                                            .reviews__car-ava
+                                                +image('../images/img/avatar.png')
+                                            .reviews__car-driver
+                                                .reviews__car-driver-name
+                                                    span John Doe
+                                                .reviews__car-driver-rating
+                                                    .rating__star(data-rateyo-rating="5")
+                                            .reviews__car-time
+                                                span 12.09.2019
+                                        .reviews__car-desc
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                    .reviews__car-single
+                                        .reviews__car-info
+                                            .reviews__car-ava
+                                                +image('../images/img/avatar.png')
+                                            .reviews__car-driver
+                                                .reviews__car-driver-name
+                                                    span John Doe
+                                                .reviews__car-driver-rating
+                                                    .rating__star(data-rateyo-rating="5")
+                                            .reviews__car-time
+                                                span 12.09.2019
+                                        .reviews__car-desc
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                    .reviews__car-single
+                                        .reviews__car-info
+                                            .reviews__car-ava
+                                                +image('../images/img/avatar.png')
+                                            .reviews__car-driver
+                                                .reviews__car-driver-name
+                                                    span John Doe
+                                                .reviews__car-driver-rating
+                                                    .rating__star(data-rateyo-rating="5")
+                                            .reviews__car-time
+                                                span 12.09.2019
+                                        .reviews__car-desc
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                    .reviews__car-single
+                                        .reviews__car-info
+                                            .reviews__car-ava
+                                                +image('../images/img/avatar.png')
+                                            .reviews__car-driver
+                                                .reviews__car-driver-name
+                                                    span John Doe
+                                                .reviews__car-driver-rating
+                                                    .rating__star(data-rateyo-rating="5")
+                                            .reviews__car-time
+                                                span 12.09.2019
+                                        .reviews__car-desc
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                    .reviews__car-single
+                                        .reviews__car-info
+                                            .reviews__car-ava
+                                                +image('../images/img/avatar.png')
+                                            .reviews__car-driver
+                                                .reviews__car-driver-name
+                                                    span John Doe
+                                                .reviews__car-driver-rating
+                                                    .rating__star(data-rateyo-rating="5")
+                                            .reviews__car-time
+                                                span 12.09.2019
+                                        .reviews__car-desc
+                                            p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                        .reviews__add-review
+                            a(href='#').reviews__btns-white Добавить отзыв
+            include ../common/footer.pug
+        #checkout.checkout.checkout_hide
+            .checkout__modal
+                a#checkout-close.checkout__close(href='#')
+                    +icon('close','checkout__close-icon')
+                .checkout__title
+                    span Оформить заказ
+                form.booking__form.form
+                    .booking__input-row.booking__input-row_car
+                        input.booking__input.booking__input_car(placeholder='Откуда' type='text')
+                        input.booking__input.booking__input_car(placeholder='Куда' type='text')
+                    .booking__input-row.booking__input-row_car
+                        label.booking__datepicker.booking__datepicker_car
+                            input.booking__input-datepicker(type='text' id="datepicker" placeholder='Выберите дату')
+                            span.booking__datepicker-icon
+                        input.booking__input.booking__input_car(placeholder='Цена' type='text')
+                    .booking__input-row.booking__input-row_car
+                        textarea.booking__textarea.booking__textarea_car(placeholder='Описание' rows="4" cols="50")
+                    .booking__link
+                        a.booking__btn(href='/index.html')
+                            span Создать
+
+block scripts
+    script(src='car.bundle.js')

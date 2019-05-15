@@ -1,0 +1,115 @@
+extends ../auth.layout.pug
+
+block content
+    .wrapper
+        include ../common/header.pug
+        .content
+            .panel__phones
+                a.panel__return(href='/choose-user-type.html')
+                    +icon('arrow','panel__arrow')
+                    span Вернуться назад
+                .panel__header-title
+                    span Регистрация поставщика
+                ul.panel__steps.steps.steps__list
+                    li.steps__item
+                        span
+                            +icon('done','steps__done')
+                    li.steps__item.steps__item_active.steps__item_steps
+                        span  3
+                .panel__content
+                    .panel__content-title.panel__content-title_supplier.title
+                        span.panel__title-bold Шаг 3. &nbsp
+                        span Добавление авто
+                        span.panel__text_sub Добавьте Ваш автомобиль и получайте заказы прямо сейчас
+                    form.panel__form.panel__form_step-3.form
+                        .panel__input-group.panel__input-group_step-3
+                            .panel__input-row.panel__input-row_step-3
+                                select.form__select.form__select_no_spacing.panel__input_step-3
+                                    option(value='' disabled selected hidden) Тип авто
+                                    option(value='1') Авто
+                                    option(value='2') Микроавтобусы
+                                    option(value='3') Автобусы
+                                    option(value='4') Грузовые
+                                    option(value='5') Техника
+                                select.form__select.form__select_no_spacing.panel__input_step-3
+                                    option(value='' disabled selected hidden) Марка
+                                    option(value='1') 1
+                                    option(value='2') 2
+                                select.form__select.form__select_no_spacing.panel__input.panel__input_step-3
+                                    option(value='' disabled selected hidden) Модель
+                                    option(value='1') 1
+                                    option(value='2') 2
+                            .panel__input-row.panel__input-row_step-3
+                                input.form__input.panel__input_step-3(placeholder='Год выпуска' type='text')
+                                input.form__input.panel__input_step-3(placeholder='Гос номер' type='text')
+                                select.form__select.form__select_no_spacing.panel__input.panel__input_step-3
+                                    option(value='' disabled selected hidden) Цвет
+                                    option(value='1') 1
+                                    option(value='2') 2
+                            .panel__input-row.panel__input-row_step-3
+                                input.form__input.panel__input_step-3(placeholder='Дата тех осмотра' type='text')
+                                input.form__input.panel__input_step-3(placeholder='Посадочных мест' type='text')
+                                input.form__input.panel__input_step-3(placeholder='Грузоподъемность' type='text')
+                        .panel__add-photo
+                            label.form__photo-label
+                                +icon('photo','form__photo-img')
+                                span  Добавить фото
+                                input#photo-input.form__photo(type='file' multiple accept="image/x-png,image/gif,image/jpeg")
+                            .panel__photos-container#photos-container
+                        .panel__btns
+                            a.panel__btn-blue(href='/vendor-registration-step-5.html')
+                                span Продолжить
+            .container.content__container.panel
+                .panel__header
+                    .panel__header-pic
+                        +image('../images/img/car-icon.png')
+                    .panel__header-title
+                        span Регистрация поставщика
+                    ul.panel__header-steps.steps.steps__list
+                        li.steps__item
+                            span
+                                +icon('done','steps__done')
+                        li.steps__item
+                            span
+                                +icon('done','steps__done')
+                        li.steps__item.steps__item_active.steps__item_steps
+                            span  3
+                .panel__content
+                    .panel__content-title.panel__content-title_supplier.title
+                        span.panel__title-bold Шаг 3. &nbsp
+                        span Добавление авто
+                        span.panel__text_sub Добавьте Ваш автомобиль и получайте заказы прямо сейчас
+                    form.panel__form.panel__form_step-3.form
+                        include ../common/checkbox.pug
+                        .panel__input-group.panel__input-group_step-3
+                            .panel__input-row.panel__input-row_step-3
+                                select.form__select.form__select_no_spacing.panel__input_step-3
+                                    option(value='' disabled selected hidden) Марка
+                                    option(value='1') 1
+                                    option(value='2') 2
+                                select.form__select.form__select_no_spacing.panel__input.panel__input_step-3
+                                    option(value='' disabled selected hidden) Модель
+                                    option(value='1') 1
+                                    option(value='2') 2
+                            .panel__input-row.panel__input-row_step-3
+                                input.form__input.panel__input_step-3(placeholder='Год выпуска' type='text')
+                                input.form__input.panel__input_step-3(placeholder='Гос номер' type='text')
+                                select.form__select.form__select_no_spacing.panel__input.panel__input_step-3
+                                    option(value='' disabled selected hidden) Цвет
+                                    option(value='1') 1
+                                    option(value='2') 2
+                            .panel__input-row.panel__input-row_step-3
+                                input.form__input.panel__input_step-3(placeholder='Дата тех осмотра' type='text')
+                                input.form__input.panel__input_step-3(placeholder='Посадочных мест' type='text')
+                                input.form__input.panel__input_step-3(placeholder='Грузоподъемность' type='text')
+                        .panel__add-photo
+                            label.form__photo-label
+                                +icon('photo','form__photo-img')
+                                span  Добавить фото
+                                input#photo-input.form__photo(type='file' multiple accept="image/x-png,image/gif,image/jpeg")
+                            .panel__photos-container#photos-container
+                        .panel__btns
+                            a.panel__btn-gray(href='/vendor-registration-step-2.html')
+                                span Назад
+                            a.panel__btn-blue(href='/vendor-registration-step-4.html')
+                                span Продолжить

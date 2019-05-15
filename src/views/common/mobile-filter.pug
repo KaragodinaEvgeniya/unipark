@@ -1,0 +1,46 @@
+.mobile-filter(id="filter")
+    .mobile-filter__containner
+        btn.mobile-filter__return(id="return")
+            +icon('arrow','mobile-filter__arrow')
+            span Назад на главную
+        .mobile-filter__search
+            input.mobile-filter__input(type='text' placeholder='Поиск' name='search')
+            input.mobile-filter__search-button-blue(type='button')
+    .mobile-filter__item
+        .mobile-filter__icon(id="type-open")
+        select.mobile-filter__list(name='type' id="type")
+            option(value='1' selected) Тип транспорта
+            option(value='2') Авто
+            option(value='3') Автобусы
+            option(value='4') Грузовые
+            option(value='5') Tехника
+    .mobile-filter__item
+        .mobile-filter__icon(id="brand-open")
+        select.mobile-filter__list(name='brand' id="brand")
+            option(value='1' selected) Марка
+            option(value='2') Mercedes-Benz
+            option(value='3') BMW
+            option(value='4') Mercedes-Benz
+            option(value='5') BMW
+    .mobile-filter__item
+        .mobile-filter__icon(id="model-open")
+        select.mobile-filter__list(name='model' id="model")
+            option(value='1' selected) Модель
+            option(value='2') AMG E63 S
+            option(value='3') C43 AMG
+            option(value='4') AMG E63 S
+            option(value='5') C43 AMG
+    .mobile-filter__item
+        .mobile-filter__icon(id="year-open")
+        select.mobile-filter__list(name='year' id="year")
+            option(value='1' selected) Год выпуска
+            option(value='2') 2019
+            option(value='3') 2018
+            option(value='4') 2017
+            option(value='5') 2016
+    include accordion.pug
+
+
+
+
+

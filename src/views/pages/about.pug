@@ -1,0 +1,229 @@
+extends ../auth.layout.pug
+
+block content
+    .wrapper
+        .about
+            include ../common/header.pug
+            .about__container
+                .about__text
+                    .about__title
+                        span О проекте
+                    .about__desc
+                        p UniPark – Первый казахстанский продукт, созданный транспортной компанией с 14-летним опытом в сфере логистики.
+                    .about__link
+                        a.about__btn(href='/index.html')
+                            span Смотреть каталог
+            .booking.booking__container.container
+                .booking__card
+                    .booking__text
+                        .booking__title
+                            span Хотите забранировать авто?
+                        .booking__desc
+                            span Заполните пожалуйста все поля и мы доставим вам авто или технику вовремя
+                    form.booking__form.form
+                        .booking__car-type
+                            include ../common/checkbox.pug
+                        ul.booking__input-group
+                            li.booking__input-row.booking__input-row_type
+                                select.booking__select-type
+                                    option(value='' disabled selected hidden) Тип авто
+                                    option(value='1') Авто
+                                    option(value='2') Микроавтобусы
+                                    option(value='3') Автобусы
+                                    option(value='4') Грузовые
+                                    option(value='5') Техника
+                            li.booking__input-row.booking__input-row_text
+                                input.booking__input(placeholder='Введите ваше имя' type='text')
+                            li.booking__input-row.booking__input-row_text
+                                input.booking__input(placeholder='Телефон' type='text')
+                            li.booking__input-row
+                                select.booking__select
+                                    option(value='' disabled selected hidden) Марка авто
+                                    option(value='1') Mercedes
+                                    option(value='2') BMW
+                            li.booking__input-row
+                                label.booking__datepicker
+                                    input.booking__input-datepicker(type='text' id="datepicker" placeholder='Выберите дату')
+                                    span.booking__datepicker-icon
+                            li.booking__input-row
+                                .booking__link
+                                    a.booking__btn(href='/index.html')
+                                        span Оставить заявку
+            .how-it-works
+                .how-it-works__container.container
+                    .how-it-works__title
+                        span Как работает сервис UniPark
+                    .how-it-works__slider
+                        .how-it-works__slider-tabs
+                            button(id='client').how-it-works__link.how-it-works__link_active.slider-button
+                                span ВЫ КЛИЕНТ
+                            button(id='supplier').how-it-works__link.slider-button
+                                span ВЫ ПОСТАВЩИК
+                        .how-it-works__swiper.swiper-container
+                            .how-it-works__slider-wrapper.swiper-wrapper
+                                .how-it-works__slide
+                                    .how-it-works__slides
+                                        .how-it-works__slide-wrapper
+                                            .how-it-works__slide-icon
+                                                +icon('slider-search','how-it-works__slide-img')
+                                            .how-it-works__slide-title
+                                                span Поиск
+                                            .how-it-works__slide-desc
+                                                span Найдите подходящий для Вас транспорт
+                                        .how-it-works__slide-wrapper
+                                            .how-it-works__slide-icon
+                                                +icon('slider-wallet','how-it-works__slide-img')
+                                            .how-it-works__slide-title
+                                                span Оплата
+                                            .how-it-works__slide-desc
+                                                span Произведите онлайн оплату для брони
+                                        .how-it-works__slide-wrapper
+                                            .how-it-works__slide-icon
+                                                +icon('slider-done','how-it-works__slide-img')
+                                            .how-it-works__slide-title
+                                                span Готово
+                                            .how-it-works__slide-desc
+                                                span Получите Ваш транспорт вовремя
+                                .how-it-works__slide
+                                    .how-it-works__slides
+                                        .how-it-works__slide-wrapper
+                                            .how-it-works__slide-icon
+                                                +icon('slider-search','how-it-works__slide-img')
+                                            .how-it-works__slide-title
+                                                span Поиск 2
+                                            .how-it-works__slide-desc
+                                                span Найдите подходящий для Вас транспорт
+                                        .how-it-works__slide-wrapper
+                                            .how-it-works__slide-icon
+                                                +icon('slider-wallet','how-it-works__slide-img')
+                                            .how-it-works__slide-title
+                                                span Оплата 2
+                                            .how-it-works__slide-desc
+                                                span Произведите онлайн оплату для брони
+                                        .how-it-works__slide-wrapper
+                                            .how-it-works__slide-icon
+                                                +icon('slider-done','how-it-works__slide-img')
+                                            .how-it-works__slide-title
+                                                span Готово 2
+                                            .how-it-works__slide-desc
+                                                span Получите Ваш транспорт вовремя
+            .comfort
+                .comfort__container
+                    .comfort__title
+                        span Мы делаем все для Вашего удобства
+                    .comfort__desc
+                        p UniPark - это уникальное приложение, предоставляющее услуги по заказу такси, аренде спецтехники и аренде авто с водителем и без водителя, доставке/развозке сотрудников компаний, обслуживанию школьных маршрутов и т.д.
+                    .comfort__phones-img
+                    .comfort__download
+                        .comfort__title_gray
+                            span Скачивайте приложение
+                        .comfort__list
+                            a.comfort__store-apple(href="#")
+                            a.comfort__store-google(href="#")
+            .reviews
+                .reviews__container.container
+                    .reviews__wrapper.swiper-wrapper
+                        .reviews__slide.swiper-slide
+                            .reviews__quote
+                                +icon('quote','reviews__quote-img')
+                            .reviews__text
+                                p 1 Я работаю с Autopark01 уже много лет. И за все это время не было ни одного момента, чтобы не хватало клиентов, заработка или что-то в этом роде. Благодаря им у меня есть стабильные источники дохода!
+                            .reviews__user
+                                .reviews__avatar
+                                    +image('../images/img/avatar.png','reviews__avatar-img')
+                                .reviews__user-info
+                                    .reviews__user-name
+                                        span Иванов Иван, г.Астана
+                                    .reviews__user-position
+                                        span Водитель
+                        .reviews__slide.swiper-slide
+                            .reviews__quote
+                                +icon('quote','reviews__quote-img')
+                            .reviews__text
+                                p 2 Я работаю с Autopark01 уже много лет. И за все это время не было ни одного момента, чтобы не хватало клиентов, заработка или что-то в этом роде. Благодаря им у меня есть стабильные источники дохода! Я работаю с Autopark01 уже много лет. И за все это время не было ни одного момента, чтобы не хватало клиентов, заработка или что-то в этом роде. Благодаря им у меня есть стабильные источники дохода!
+                            .reviews__user
+                                .reviews__avatar
+                                    +image('../images/img/client.png','reviews__avatar-img')
+                                .reviews__user-info
+                                    .reviews__user-name
+                                        span Адамбаев Адамбай, г. Алматы
+                                    .reviews__user-position
+                                        span Водитель
+                        .reviews__slide.swiper-slide
+                            .reviews__quote
+                                +icon('quote','reviews__quote-img')
+                            .reviews__text
+                                p 3 Я работаю с Autopark01 уже много лет. И за все это время не было ни одного момента, чтобы не хватало клиентов, заработка или что-то в этом роде. Благодаря им у меня есть стабильные источники дохода! Я работаю с Autopark01 уже много лет. И за все это время не было ни одного момента, чтобы не хватало клиентов, заработка или что-то в этом роде. Благодаря им у меня есть стабильные источники дохода!
+                            .reviews__user
+                                .reviews__avatar
+                                    +image('../images/img/client.png','reviews__avatar-img')
+                                .reviews__user-info
+                                    .reviews__user-name
+                                        span Адамбаев Адамбай, г. Алматы
+                                    .reviews__user-position
+                                        span Водитель
+                        .reviews__slide.swiper-slide
+                            .reviews__quote
+                                +icon('quote','reviews__quote-img')
+                            .reviews__text
+                                p 4 Я работаю с Autopark01 уже много лет. И за все это время не было ни одного момента, чтобы не хватало клиентов, заработка или что-то в этом роде. Благодаря им у меня есть стабильные источники дохода! Я работаю с Autopark01 уже много лет. И за все это время не было ни одного момента, чтобы не хватало клиентов, заработка или что-то в этом роде. Благодаря им у меня есть стабильные источники дохода!
+                            .reviews__user
+                                .reviews__avatar
+                                    +image('../images/img/client.png','reviews__avatar-img')
+                                .reviews__user-info
+                                    .reviews__user-name
+                                        span Адамбаев Адамбай, г. Алматы
+                                    .reviews__user-position
+                                        span Водитель
+                        .reviews__slide.swiper-slide
+                            .reviews__quote
+                                +icon('quote','reviews__quote-img')
+                            .reviews__text
+                                p 5 Я работаю с Autopark01 уже много лет. И за все это время не было ни одного момента, чтобы не хватало клиентов, заработка или что-то в этом роде. Благодаря им у меня есть стабильные источники дохода! Я работаю с Autopark01 уже много лет. И за все это время не было ни одного момента, чтобы не хватало клиентов, заработка или что-то в этом роде. Благодаря им у меня есть стабильные источники дохода!
+                            .reviews__user
+                                .reviews__avatar
+                                    +image('../images/img/client.png', 'reviews__avatar-img')
+                                .reviews__user-info
+                                    .reviews__user-name
+                                        span Адамбаев Адамбай, г. Алматы
+                                    .reviews__user-position
+                                        span Водитель
+                        .reviews__buttons
+                            button.reviews__next(id='next')
+                                .reviews__button-icon
+                            button.reviews__prev(id='prev')
+                                .reviews__button-icon-left
+            .digits
+                .digits__container.container
+                    .digits__title
+                        span UniPark в цифрах
+                    ul.digits__list
+                        li.digits__item
+                            .digits__digit
+                                span 537
+                            .digits__subtext
+                                span клиентов в системе
+                        li.digits__item
+                            .digits__digit
+                                span 113
+                            .digits__subtext
+                                span заказов в день
+                        li.digits__item
+                            .digits__digit
+                                span 873
+                            .digits__subtext
+                                span всего сделок
+            .questions
+                .questions__container.container
+                    .questions__text
+                        .questions__title
+                            span Остались вопросы?
+                        .questions__subtext
+                            span Закажите обратный звонок и наш менеджер свяжется с Вами
+                    .questions__link
+                        a.questions__btn(href='/index.html')
+                            span Смотреть каталог
+            include ../common/footer.pug
+block scripts
+    script(src='about.bundle.js')
+

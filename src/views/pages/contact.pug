@@ -1,0 +1,48 @@
+extends ../auth.layout.pug
+
+block content
+    .wrapper
+        .contact
+            include ../common/header.pug
+            iframe.contact__map(src='https://yandex.ru/map-widget/v1/?um=constructor%3A8df55a184dba67813adbd1955a8dc02e80a663eafdcc2f0804e7b05e2250fb51&source=constructor', width='100%', height='462', frameborder='0')
+            .contact__container.container
+                .contact__our
+                    .contact__title
+                        span Наши контакты
+                    .contact__info
+                        .contact__address
+                            span Республика Казахстан, г. Астана, пр. Мангилик ел, павильон С 4.6
+                        a.contact__tel(href='tel:+77172695557')
+                            span +7 (7172) 69 55 57
+                        a.contact__email(href='mailto:info@unipark.kz')
+                            span info@unipark.kz
+                    .contact__socials
+                        ul.contact__list
+                            li.contact__item
+                                a.contact__elem(href='#')
+                                    +icon('instagram-blue','contact__instagram')
+                            li.contact__item
+                                a.contact__elem(href='#')
+                                    +icon('whatsapp-blue','contact__whatsapp')
+                            li.contact__item
+                                a.contact__elem(href='#')
+                                    +icon('facebook-blue','contact__facebook')
+                .contact__booking.booking.booking__container.container
+                    .booking__card
+                        .booking__content
+                            .booking__text
+                                .booking__title
+                                    span Закажите обратный звонок
+                                .booking__desc
+                                    span Заполните пожалуйста все поля и наш менеджер свяжется с Вами
+                            form.booking__form
+                                .booking__input-group
+                                    .booking__input-row
+                                        input.booking__input(placeholder='Введите ваше имя' type='text')
+                                        input.booking__input(placeholder='Телефон' type='tel')
+                                    .booking__input-row
+                                        textarea.booking__textarea(placeholder='Сообщение' rows="4" cols="50")
+                                    .booking__link
+                                        button.contact__btn
+                                            span Отправить
+            include ../common/footer.pug

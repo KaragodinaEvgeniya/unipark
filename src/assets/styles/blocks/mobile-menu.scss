@@ -1,0 +1,56 @@
+.mobile-menu{
+  position: absolute;
+  top: 61px;
+  right: -10000px;
+  display: flex;
+  flex-flow: column;
+  background-color: rgba(255, 255,255 , 1);
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  padding: 25px 10% ;
+
+}
+
+
+.mobile-menu__form-city{
+  z-index: 1;
+  @include form-select;
+  @include filter;
+  margin-bottom: 42px;
+}
+
+.mobile-menu__nav{
+  display: flex;
+  width: 50%;
+  margin-bottom:107px ;
+}
+
+.mobile-menu__list{
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+}
+
+.mobile-menu__item {
+  display: flex;
+  @include OpenSans-Regular;
+  font-size: 18px;
+  line-height: 61px;
+  color: $black;
+
+
+}
+
+.mobile-menu__elem{
+  text-decoration: none;
+  color: $black;
+  border-bottom: 3px solid transparent;
+  transition:  0.3s ease-in-out;
+
+  &:hover, &_active{
+    border-bottom: 3px solid $blue;
+    color: $darkgray;
+
+  }
+}

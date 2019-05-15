@@ -1,0 +1,188 @@
+.header{
+  display: flex;
+  height: 90px;
+  border-bottom: 1px solid $gray;
+  margin-bottom: 26px;
+  justify-content: center;
+  align-items: center;
+
+  @include tablets($tablets){
+    height: 61px;
+  }
+
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  width: 95%;
+  max-width: 1400px;
+  padding: 10px;
+
+}
+
+.header__left{
+  display: flex;
+  width: 200px;
+  height: 65px;
+  align-items: center;
+
+  @include tablets($tablets){
+    width: 50%;
+
+  }
+}
+
+.header__logo {
+  background: url(./assets/images/img/logo.png) center center no-repeat;
+  display: flex;
+  background-size: 100%;
+  width: 90%;
+  height: 90%;
+
+  @include tablets($tablets) {
+    width: 100px;
+    height: 36px;
+  }
+}
+.header__center{
+  display: flex;
+  width: 70%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+
+  @include tablets($tablets){
+    display: none;
+  }
+}
+
+.header__menu{
+  flex: 1;
+  max-width: 480px;
+}
+
+.header__actions{
+  display: flex;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+
+  @include interval($interval){
+    justify-content:flex-end ;
+  }
+
+  @include tablets($tablets){
+    width: 50%;
+  }
+}
+
+.select {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  width: 30%;
+
+  @include interval($interval){
+    width: 40%;
+  }
+
+  @include tablets($tablets){
+    display: none;
+  }
+}
+
+.select__text{
+  margin-right: 9px;
+  @include OpenSans-Regular;
+  font-size: 14px;
+  color: $black;
+  font-weight: 600;
+}
+
+.select__arrow{
+  display: flex;
+  width: 8px;
+  height: 5px;
+}
+
+select__arrow-down-img{
+  width: 100%;
+  height: 100%;
+}
+
+
+.divider_vertical{
+  border: 1px solid #B8C1CB;
+  transform: rotate(90deg);
+  width: 39px;
+
+
+  @include interval($interval){
+    width: 30px;
+  }
+}
+
+.btn-group{
+  display: flex;
+
+  @include interval($interval){
+    display: none;
+  }
+}
+
+.btn-group__black{
+  @include btn;
+  @include btn-black;
+  margin-right: 20px;
+}
+
+.btn-group__blue{
+  @include btn;
+  @include btn-blue;
+}
+
+.actions__btn{
+  display: none;
+
+  @include tablets($tablets){
+    display: flex;
+    width: 21px ;
+    height: 20px;
+    cursor:pointer;
+    margin-right: 5px;
+  }
+
+}
+
+.actions__interval{
+  display: none;
+
+  @include interval($interval){
+    display: flex;
+    width: 21px ;
+    height: 20px;
+    cursor:pointer;
+    margin-right: 5px;
+  }
+
+  @include tablets($tablets){
+    display: none;
+  }
+}
+
+.actions__account{
+  width: 100%;
+  height: 100%;
+
+}
+
+.actions__hamburger{
+  display: none;
+
+  @include tablets($tablets){
+    width: 30px;
+    height: 30px;
+  }
+}

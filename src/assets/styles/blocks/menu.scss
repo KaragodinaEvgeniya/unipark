@@ -1,0 +1,42 @@
+.menu__list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include interval($interval){
+    margin-right: 25px;
+  }
+}
+
+.menu__item{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.menu__link{
+  text-decoration: none;
+  @include OpenSans-Regular;
+  font-weight: 600;
+  line-height: 86px;
+  color: $darkgray;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  border-bottom: 3px solid transparent;
+  transition:  0.3s ease-in-out;
+
+
+  &:hover{
+    border-bottom: 3px solid $blue;
+    color: $black;
+  }
+  &:active{
+    border-bottom: 3px solid $blue;
+    color: $black;
+  }
+
+  //@include interval($interval){
+  //  font-size: 14px;
+  //}
+}

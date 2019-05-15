@@ -1,0 +1,15 @@
+extends ../auth.layout.pug
+
+block content
+    .wrapper
+        .index
+            include ../common/header.pug
+            .container.main
+                include ../common/filter.pug
+                include ../common/main-content.pug
+            include ../common/pagination.pug
+            include ../common/footer.pug
+    include ../common/mobile-menu.pug
+
+block scripts
+    script(src='main.bundle.js')

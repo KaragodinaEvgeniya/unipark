@@ -1,0 +1,74 @@
+form(action='#').filter
+    .filter__header
+        span.filter__name Фильтр
+        a#filter-all-minimize.filter__minimize(href='#')
+            svg.filter__minimize-icon
+                line(y1="1" x2="15" y2="1" stroke="#249AF3" stroke-width="2")
+    .filter__all.filter__row
+        .filter__search
+            input.filter__input(type='text' placeholder='Поиск' name='search')
+            input.filter__search-button-blue.filter__search-button(type='button')
+        .filter__car-type
+            include checkbox.pug
+        select.filter__select(name='brand')
+            option(value='1' selected) Mercedes-Benz
+            option(value='2') BMW
+        select.filter__select(name='model')
+            option(value='1' selected) AMG E63 S
+            option(value='2') C43 AMG
+        .filter__from-till
+            select.filter__select(name='from-year')
+                option(value='' disabled selected hidden) от
+                option(value='1') 2018
+                option(value='2') 2019
+            .filter__select-line
+                svg.filter__select-line-icon
+                    line(y1="0.5" x2="15" y2="0.5" stroke="#B8C1CB")
+            select.filter__select(name='till-year')
+                option(value='' disabled selected hidden) до
+                option(value='1') 2018
+                option(value='2') 2019
+    .filter__color
+        .filter__sub-header
+            span.filter__name_smaller Цвет
+            a.filter__minimize.filter__subfilter(href='#')
+                svg.filter__minimize-icon
+                    line(y1="1" x2="15" y2="1" stroke="#249AF3" stroke-width="2")
+        .filter__all-colors
+            include colors.pug
+    .filter__seats
+        .filter__sub-header
+            span.filter__name_smaller Количество посадочных мест
+            a.filter__minimize.filter__subfilter(href='#')
+                svg.filter__minimize-icon
+                    line(y1="1" x2="15" y2="1" stroke="#249AF3" stroke-width="2")
+        .filter__from-till
+            select.filter__select(name='from_year')
+                option(value='' disabled selected hidden) от
+                option(value='2') 10
+                option(value='2') 12
+            .filter__select-line
+                svg.filter__select-line-icon
+                    line(y1="0.5" x2="15" y2="0.5" stroke="#B8C1CB")
+            select.filter__select(name='till_year')
+                option(value='' disabled selected hidden) до
+                option(value='1') 14
+                option(value='2') 15
+    .filter__price
+        .filter__sub-header
+            span.filter__name_smaller Цена за час
+            a.filter__minimize.filter__subfilter(href='#')
+                svg.filter__minimize-icon
+                    line(y1="1" x2="15" y2="1" stroke="#249AF3" stroke-width="2")
+        .filter__range-inputs
+            .filter__range.slider.slider__block.slider__block--slider
+                include slider.pug
+            .filter__from-till
+               input#min-price.filter__input.filter__input_range(type='number' name='min_price' value='10000' data-min-price='0')
+               .filter__select-line
+                    svg.filter__select-line-icon
+                        line(y1="0.5" x2="15" y2="0.5" stroke="#B8C1CB")
+               input#max-price.filter__input.filter__input_range(type='number' name='max_price' value='100000' data-max-price='100000')
+    .filter__buttons.filter__row
+        input(type='submit' value='Применить фильтр').filter__btn-blue
+        input(type='submit' value='Отправить заказ всем (86)').filter__btn-gray.btn.btn__link.btn__link_color_blue.btn__link_large.btn__link_gray.btn__link_small_text

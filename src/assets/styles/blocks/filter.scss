@@ -1,0 +1,204 @@
+.filter{
+  max-width: 346px;
+  min-width: 320px;
+  border: 1px solid $gray;
+  border-radius: 5px;
+  margin-right: 53px;
+  height: 100%;
+
+  @include interval($interval){
+    display: none;
+  }
+}
+
+.filter__header{
+  height: 56px;
+  border-bottom: 1px solid $gray;
+  padding: 25px 31px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter__minimize{
+  width: 15px;
+  height: 2px;
+  display: block;
+  overflow: hidden;
+}
+
+.filter__minimize-icon{
+  width: 15px;
+  height: 20px;
+}
+
+.filter__name{
+  font-weight: 600;
+
+
+  &_smaller{
+    font-size: 12px;
+    color: #B8C1CB;
+  }
+
+}
+
+.filter__all{
+  display: flex;
+  flex-flow: column;
+  padding: 25px 31px;
+
+
+
+}
+
+.filter__search{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.filter__input{
+  @include form-search;
+  border-radius: 5px;
+
+  &_range{
+    width: 127px;
+    flex: initial;
+
+
+  }
+
+}
+
+.filter__search-button{
+  @include form-search-button;
+}
+
+.filter__search-button-blue{
+  background-color: $blue;
+
+  &:hover, &_active{
+    background-color: $white;
+
+  }
+}
+.filter__all,
+.filter__buttons{
+  visibility: visible;
+  opacity: 1;
+}
+
+.hide{
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  min-height: 0;
+  border-bottom: 0;
+
+}
+
+.filter__car-type{
+  margin:0 auto 22px auto;
+}
+
+.filter__select{
+  @include form-select;
+  @include filter;
+  width: 100%;
+  height: 35px;
+  font-weight: 600;
+}
+
+.filter__from-till{
+  display: flex;
+  height: 61px;
+  justify-content: space-between;
+
+}
+
+.filter__all-colors{
+  border-bottom: 1px solid $gray ;
+}
+.filter__select-line{
+  width: 30%;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter__select-line-icon{
+  width: 15px;
+  height: 1px;
+  vertical-align: center;
+  margin: 0px 6px;
+}
+
+.filter__color{
+  border-top: 0;
+  padding:0  31px 25px 31px;
+}
+
+.filter__sub-header{
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.filter__seats{
+  padding:0  31px 25px 31px;
+}
+
+.filter__price{
+  border-top: 0;
+  padding:0  31px 0 31px;
+  border-bottom: 1px solid $gray;
+  margin-bottom: 25px;
+}
+
+.filter__range{
+  width: 127px;
+  flex: initial;
+  margin-top: 30px;
+
+}
+
+.filter__buttons{
+  padding:0  31px 25px 31px;
+}
+
+.filter__btn-blue{
+  @include btn;
+  @include btn-blue;
+  min-width: 283px;
+  min-height: 40px;
+  font-size: 12px;
+  padding: 10px;
+  margin-bottom: 16px;
+
+
+}
+
+.filter__btn-gray{
+  @include btn;
+  min-width: 283px;
+  min-height: 40px;
+  font-size: 12px;
+  padding: 10px;
+  background: $lightgrey;
+  color: $darkgray;
+  border: 1px solid transparent;
+  transition:  0.4s ease-in-out;
+  &:hover{
+    color: $blue;
+    background: $lightgrey;
+    border: 1px solid $blue;
+  }
+
+}

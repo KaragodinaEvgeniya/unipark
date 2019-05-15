@@ -1,0 +1,59 @@
+extends ../auth.layout.pug
+
+block content
+    .wrapper
+        include ../common/header.pug
+        .content
+            .panel__phones
+                a.panel__return(href='/vendor-registration-step-1.html')
+                    +icon('arrow','panel__arrow')
+                    span Вернуться назад
+                .panel__header-title
+                    span Регистрация поставщика
+                ul.panel__steps.steps.steps__list
+                    li.steps__item
+                        span
+                            +icon('done','steps__done')
+                    li.steps__item.steps__item_active.steps__item_steps
+                        span  2
+                .panel__content
+                    .panel__content-title.title
+                        span.panel__title-bold Шаг 2. &nbsp
+                        span Подтверждение смс
+                        span.panel__text_sub На ваш номер было отправлено смс сообщение. Введите код ниже
+                    div.panel__count
+                        span Осталось: 56 секунд
+                    form.panel__form.form
+                        input.form__input.panel__input.panel__input_sms(placeholder='Код из смс' type='text')
+                    a.panel__btn-blue(href='/vendor-registration-step-3.html')
+                        span Продолжить
+
+            .container.content__container.panel
+                .panel__header
+                    .panel__header-pic
+                        +image('../images/img/car-icon.png')
+                    .panel__header-title
+                        span Регистрация поставщика
+                    ul.panel__header-steps.steps.steps__list
+                        li.steps__item
+                            span
+                                +icon('done','steps__done')
+                        li.steps__item.steps__item_active
+                            span  2
+                        li.steps__item
+                            span  3
+                .panel__content
+                    .panel__content-title.title
+                        span.panel__title-bold Шаг 2. &nbsp
+                        span Подтверждение смс
+                        span.panel__text_sub На ваш номер было отправлено смс сообщение. Введите код ниже
+                    div.panel__count
+                        span Осталось: 56 секунд
+                    form.panel__form.form
+                        input.form__input.panel__input.panel__input_sms(placeholder='Код из смс' type='text')
+                    .panel__btns
+                        a.panel__btn-gray(href='/vendor-registration-step-1.html')
+                            span Назад
+                        a.panel__btn-blue(href='/vendor-registration-step-3.html')
+                            span Продолжить
+

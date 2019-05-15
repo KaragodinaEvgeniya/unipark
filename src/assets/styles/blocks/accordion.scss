@@ -1,0 +1,129 @@
+.accordion{
+  width: 100%;
+}
+
+.accordion__list{
+  width: 100%;
+}
+
+.accordion__item {
+  width: 100%;
+  cursor: pointer;
+  display: block;
+  @include OpenSans-Regular;
+  font-size: 14px;
+  color: $black;
+  position: relative;
+  transition: all 0.4s ease-out;
+  padding: 15px 20px 15px 35px;
+  border-bottom: 1px solid $gray;
+
+}
+.accordion__icon {
+  position: absolute;
+  display: inline-block;
+  width: 11.91px;
+  height: 6.79px;
+  right: 20px;
+  top:15px;
+  z-index: 10;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 1.5px;
+    background-color: $darkgray;
+    transition: transform 250ms ease;
+
+  }
+
+
+  &:before {
+    transform: translate(3px,8px) rotate(45deg) ;
+  }
+
+  &:after {
+    transform: translate(-3px,8px) rotate(-45deg) ;
+  }
+
+  &.accordion__icon--focus {
+    &::before {
+      transform: translate(-3px, 8px) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(3px, 8px) rotate(-45deg);
+    }
+  }
+}
+
+.accordion__submenuItems-list {
+  display: none;
+
+  transition: 1s ease-in-out;
+
+
+  &.accordion__submenuItems-list--open {
+    display: flex;
+    flex-flow: column;
+    margin-top: 24px;
+  }
+}
+.accordion__from-till{
+  display: flex;
+  height: 61px;
+
+}
+
+.accordion__select{
+  @include form-select;
+  @include filter;
+  width: 100%;
+  height: 35px;
+  font-weight: 600;
+}
+
+.accordion__select-line{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  margin-bottom: 25px;
+}
+
+.accordion__select-line-icon{
+  width: 15px;
+  height: 1px;
+  vertical-align: center;
+  margin: 0px 6px;
+}
+
+.accordion__btn{
+  display: flex;
+  justify-content: space-between;
+  padding: 32px 20px 48px 35px;
+
+}
+
+.accordion__btn-blue{
+  @include btn;
+  @include btn-blue;
+  min-width: 132px;
+  min-height: 40px;
+  font-size: 12px;
+  padding: 10px;
+
+
+}
+
+.accordion__btn-white{
+  @include btn;
+  @include btn-white;
+  min-width: 132px;
+  min-height: 40px;
+  font-size: 12px;
+  padding: 10px;
+  margin-right: 19px;
+}

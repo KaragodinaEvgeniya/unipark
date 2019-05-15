@@ -1,0 +1,295 @@
+.booking__container{
+  width: 1196px;
+  min-height: 330px;
+  position: relative;
+
+  @include interval($interval) {
+    width: 90%;
+  }
+}
+
+
+
+
+.booking__card{
+  min-height: 453px;
+  min-width: 1196px;
+  width: 100%;
+  padding: 43px 242px 83px;
+  box-shadow: 0 10px 30px rgba(36, 154, 243, 0.15);
+  border-radius: 5px;
+  position: absolute;
+  top: -37px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+
+  @include interval($interval) {
+    min-width: 765px;
+    padding: 43px 30px 83px;
+  }
+
+  @include tablets($tablets){
+   width: 100%;
+    min-width: 320px;
+    padding: 0;
+    margin-bottom: 57px;
+  }
+
+  @include phones($phones){
+    padding-top: 0;
+
+
+  }
+}
+
+.booking__title{
+  font-weight: 600;
+  line-height: normal;
+  font-size: 24px;
+  color: #000000;
+  margin-bottom: 17px;
+
+  @include tablets($tablets){
+   font-size: 18px;
+  }
+
+  @include phones($phones){
+    font-size: 14px;
+  }
+}
+
+.booking__desc{
+  font-weight: 600;
+  line-height: normal;
+  font-size: 18px;
+  color: #75869A;
+
+  @include tablets($tablets){
+    font-size: 14px;
+    width: 70%;
+  }
+
+  @include phones($phones){
+    font-size: 12px;
+  }
+}
+
+.booking__text{
+  text-align: center;
+  margin-bottom: 52px;
+
+  @include tablets($tablets){
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+}
+
+.booking__car-type{
+  margin-bottom: 14px;
+  width: 100%;
+
+  @include tablets($tablets){
+    display: none;
+  }
+
+
+}
+
+.booking__input-row{
+  margin-bottom: 29px;
+  display: flex;
+  width: 30%;
+
+  & > *{
+    margin-right: 20px;
+  }
+
+  & > *:last-child{
+    margin-right: 0;
+  }
+
+  @include tablets($tablets){
+    margin-bottom: 17px;
+  }
+}
+
+.booking__datepicker{
+  position: relative;
+}
+.booking__input{
+@include form-input;
+  &::placeholder{
+    color: $gray;
+
+    @include tablets($tablets){
+      font-size: 14px;
+    }
+  }
+
+  @include tablets($tablets){
+        width: 100%;
+  }
+
+  &_car{
+    width: 50%;
+
+    @include tablets($tablets){
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.booking__select{
+  @include form-select;
+  width: 223px;
+
+  @include tablets($tablets){
+    width: 100%;
+  }
+}
+
+.booking__select-type{
+  display: none;
+
+  @include tablets($tablets){
+    @include form-select;
+    width: 100%;
+  }
+
+}
+
+.booking__link{
+  @include tablets($tablets){
+    width: 223px;
+  }
+
+  @include phones($phones){
+    width: 100%;
+  }
+}
+
+.booking__btn{
+  @include btn;
+  @include btn-blue;
+  width: 215px;
+  height: 40px;
+
+  @include tablets($tablets){
+    width: 100%;
+  }
+}
+
+.booking__input-group{
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content:space-between;
+  width: 100%;
+
+  @include phones($phones){
+    flex-flow: column;
+  }
+
+}
+
+.booking__input-datepicker{
+  width: 100%;
+  @include form-input;
+  &::placeholder{
+    color: $gray;
+  }
+
+}
+
+.booking__input-row{
+  display: flex;
+  width: 30%;
+
+  &_type{
+    display: none;
+
+    @include tablets($tablets){
+      display: flex;
+    }
+  }
+
+  &_text{
+    width: 48%;
+
+    @include tablets($tablets){
+      width: 100%;
+    }
+  }
+
+  @include tablets($tablets){
+    width: 100%;
+  }
+
+  &_car{
+    width: 100%;
+
+    @include tablets($tablets){
+      flex-flow: column;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.booking__datepicker{
+  @include tablets($tablets){
+    width: 100%;
+  }
+
+  &_car{
+    width: 50%;
+
+    @include tablets($tablets){
+      width: 100%;
+      margin-bottom: 24px;
+    }
+  }
+}
+
+.booking__form{
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+
+
+  @include phones($phones){
+    padding-right: 20px;
+    padding-left: 20px;
+
+  }
+}
+
+.booking__datepicker-icon{
+  @include form-datepicker-icon;
+}
+
+.booking__textarea{
+  @include form-input;
+  height: initial;
+  min-height: 83px;
+  &::placeholder{
+    color: $gray;
+
+    @include tablets($tablets){
+      font-size: 14px;
+    }
+  }
+
+  &_car{
+    @include tablets($tablets){
+      margin-bottom: 24px;
+      font-size: 14px;
+    }
+  }
+}

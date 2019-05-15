@@ -1,0 +1,408 @@
+.reviews{
+  background: rgba(245, 251, 255, 0.4);
+  padding: 75px 0;
+  min-height: 510px;
+
+  @include tablets($tablets){
+    padding: 0;
+    min-height: 350px;
+
+  }
+
+  &_car{
+    background: initial;
+    padding: 75px 0 20px;
+    min-height: initial;
+    margin-bottom: 108px;
+
+    @include tablets($tablets){
+      margin-bottom: 64px ;
+      padding-top: 55px;
+    }
+  }
+
+
+
+
+}
+
+.reviews__container{
+  max-width: 1300px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  @include desktop($desktop){
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &_car{
+    max-width: 1400px;
+
+    @include interval($interval){
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    @include tablets($tablets){
+      padding: 0;
+    }
+
+  }
+}
+
+
+.reviews__wrapper{
+  display: flex;
+}
+
+.reviews__slide{
+  padding-right: 278px;
+  min-height: 352px;
+  max-width: 1300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-left: 52px;
+  border-left: 3px solid #249AF3;
+
+
+
+  & > *{
+    margin-bottom: 45px;
+
+    @include tablets($tablets){
+      margin-bottom:10px ;
+
+    }
+  }
+
+  & > *:last-child{
+    margin-bottom: 0
+  }
+
+  @include tablets($tablets){
+    padding-right: 0;
+    padding-left: 20px ;
+    min-height: 245px;
+  }
+}
+
+.reviews__avatar{
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-right: 30px;
+  border-radius: 50%;
+
+  img{
+    width: 100%;
+  }
+
+  @include tablets($tablets){
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+  }
+}
+
+
+
+.reviews__text{
+  line-height: 36px;
+  font-size: 22px;
+  color: #101111;
+
+  @include tablets($tablets){
+    font-size: 14px;
+
+  }
+}
+
+.reviews__user{
+  display: flex;
+  align-items: center;
+}
+
+.reviews__user-info{
+  font-weight: bold;
+  line-height: 29px;
+  font-size: 18px;
+  color: #75869A;
+
+  @include tablets($tablets){
+    font-size: 14px;
+
+  }
+}
+
+.reviews__buttons{
+  top: 50%;
+  right: 0;
+  position: absolute;
+  transform: translateY(-50%);
+  display: flex;
+  flex-flow: column;
+  z-index: 1000;
+
+  @include tablets($tablets){
+    flex-flow: wrap;
+    top: 30px;
+    right: 0;
+  }
+
+  &_car{
+    top: 0;
+    transform: initial;
+    flex-flow: row;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #B8C1CB;
+  }
+
+  @include desktop($desktop){
+    right: 20px;
+  }
+}
+
+.reviews__next{
+  margin-bottom: 24px;
+
+  @include tablets($tablets){
+    margin-right: 16.5px;
+    margin-bottom: 0;
+  }
+
+
+}
+
+.reviews__next,
+.reviews__prev{
+  outline: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #DDE5EB;
+  transition:  0.4s ease-in-out;
+
+  &:hover{
+    background: #75869A;
+  }
+
+  &:hover > .reviews__button-icon-left{
+    background: svg-load('arrow-down.svg', fill=$black) center center no-repeat;
+    background-size: 100%;
+    width: 20px;
+    height: 18px;
+    transform: rotate(90deg);
+
+    @include tablets($tablets){
+      width: 10px;
+      height: 6px;
+      transform: rotate(-90deg);
+    }
+
+    &_car{
+      @include tablets($tablets){
+        transform: rotate(90deg);
+
+      }
+    }
+  }
+
+  &:hover > .reviews__button-icon{
+    background: svg-load('arrow-down.svg', fill=$black) center center no-repeat;
+    background-size: 100%;
+    width: 20px;
+    height: 18px;
+    transform: rotate(-90deg);
+
+    @include tablets($tablets){
+      width: 10px;
+      height: 6px;
+      transform: rotate(90deg);
+    }
+
+    &_car{
+      @include tablets($tablets){
+        transform: rotate(-90deg);
+
+      }
+    }
+  }
+
+
+  &_car{
+    border-radius: initial;
+    margin-bottom: initial;
+    background: white;
+  }
+
+  @include tablets($tablets){
+    width: 32.5px;
+    height: 32.5px;
+  }
+}
+
+
+
+.reviews__prev_car{
+  border-right: .5px solid #B8C1CB;
+}
+
+.reviews__next_car{
+  border-left: .5px solid #B8C1CB;
+
+  @include tablets($tablets){
+    margin-right: 0;
+  }
+}
+
+.reviews__button-icon{
+  background: svg-load('arrow-down.svg', fill=$darkgray) center center no-repeat;
+  background-size: 100%;
+  width: 20px;
+  height: 18px;
+  transform: rotate(-90deg);
+  transition:  0.4s ease-in-out;
+
+  @include tablets($tablets){
+    width: 10px;
+    height: 6px;
+    transform: rotate(90deg);
+  }
+
+  &_car{
+    @include tablets($tablets){
+      transform: rotate(-90deg);
+
+    }
+  }
+}
+
+.reviews__button-icon-left{
+    background: svg-load('arrow-down.svg', fill=$darkgray) center center no-repeat;
+    background-size: 100%;
+    width: 20px;
+    height: 18px;
+    transform: rotate(90deg);
+  transition:  0.4s ease-in-out;
+
+  @include tablets($tablets){
+    width: 10px;
+    height: 6px;
+    transform: rotate(-90deg);
+  }
+
+  &_car {
+    @include tablets($tablets) {
+      transform: rotate(90deg);
+
+    }
+  }
+}
+
+.reviews__car-slide{
+  display: flex;
+}
+
+.reviews__car-single{
+  border: 1px solid #B8C1CB;
+  border-radius: 5px;
+  max-width: 453px;
+  min-width: 453px;
+  height: 215px;
+  padding: 23px 31px;
+  margin-right: 20px;
+
+  &:last-child{
+    margin-right: initial;
+  }
+
+
+   @include tablets($tablets){
+     max-width: 100%;
+     min-width: 100%;
+   }
+
+  @include phones($phones){
+    height: 305px;
+  }
+
+}
+
+.reviews__car-ava{
+  width: 67px;
+  height: 67px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  margin-right: 30px;
+  border-radius: 50%;
+}
+
+.reviews__car-img{
+  width: 100%;
+}
+
+.reviews__car-info{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 19px;
+}
+
+.reviews__car-driver{
+  margin-right: auto;
+}
+
+.reviews__car-driver-name{
+  margin-bottom: 10px;
+  line-height: 29px;
+  font-size: 18px;
+  color: #000000;
+}
+
+.reviews__car-desc{
+  line-height: 23px;
+  font-size: 14px;
+  color: #75869A;
+}
+
+.reviews__car-time{
+  font-size: 14px;
+  color: #75869A;
+}
+
+.reviews__add-review{
+  width: 223px;
+  margin: 40px auto 0;
+
+}
+
+.reviews__quote{
+  width: 108px;
+  height: 108px;
+  @include tablets($tablets){
+    width: 52px;
+    height: 45px;
+  }
+}
+
+.reviews__quote-img{
+  width: 100%;
+  height: 100%;
+}
+
+.reviews__btns-white{
+  @include btn;
+  @include btn-white;
+  width: 223px;
+}

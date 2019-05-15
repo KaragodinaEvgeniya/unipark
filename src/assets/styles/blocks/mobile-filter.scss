@@ -1,0 +1,132 @@
+.mobile-filter{
+  position: absolute;
+  top: 61px;
+  left:-5000px;
+  display: flex;
+  flex-flow: column;
+  background-color: rgba(255, 255,255 , 1);
+  width: 100vw;
+height: 100%;
+  z-index: 0;
+  transition:  1s ease-in-out;
+
+  &.mobile-filter--open{
+    left: -15px;
+
+  }
+
+  @include interval($interval){
+    top: 75px;
+  }
+}
+
+.mobile-filter__containner{
+  padding: 25px 20px 25px 35px;
+}
+
+.mobile-filter__return{
+  display: flex;
+  @include OpenSans-Regular;
+  font-weight: 600;
+  color: $black;
+  font-size: 12px;
+  width: 90%;
+  height: 17px;
+  margin-bottom: 23px;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.mobile-filter__arrow{
+  width: 5%;
+  height: 100%;
+  margin-right: 7px;
+
+
+}
+
+.mobile-filter__search{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+
+}
+
+.mobile-filter__input{
+  @include form-search;
+
+}
+
+.mobile-filter__search-button-blue{
+  @include form-search-button;
+  background-color: $blue;
+}
+
+.mobile-filter__item {
+  cursor: pointer;
+  display: block;
+  @include OpenSans-Regular;
+  font-size: 14px;
+  border-bottom: 1px solid $gray;
+  color: $black;
+  position: relative;
+  transition: all 0.4s ease-out;
+
+
+
+
+}
+
+.mobile-filter__icon {
+  position: absolute;
+  display: inline-block;
+  width: 11.91px;
+  height: 6.79px;
+  right: 20px;
+  top:17px;
+  z-index: 10;
+  //float: right;
+
+  &::before,
+  &::after {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 1.5px;
+    background-color: $darkgray;
+    transition: transform 250ms ease;
+
+  }
+    &:before {
+      transform: translate(3px,8px) rotate(45deg) ;
+    }
+
+    &:after {
+      transform: translate(-3px,8px) rotate(-45deg) ;
+    }
+
+  &.mobile-filter__icon--focus{
+    &::before {
+      transform: translate(-3px,8px) rotate(45deg);
+    }
+
+    &::after {
+      transform: translate(3px,8px) rotate(-45deg);
+    }
+  }
+
+}
+
+.mobile-filter__list{
+  width: 100%;
+  cursor: pointer;
+  display: block;
+  padding: 15px 20px 15px 35px;
+  appearance: none;
+  border-bottom: none;
+  border-right: none;
+
+
+
+}

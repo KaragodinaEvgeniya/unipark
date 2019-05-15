@@ -1,0 +1,67 @@
+.signin__container{
+  max-width: 1200px;
+  width: 60%;
+
+  @include desktop($desktop) {
+    width: 95%
+  }
+}
+
+.signin__content{
+  min-height: 300px;
+  justify-content: center;
+  margin: 0;
+}
+
+.signin__btn{
+  display: flex;
+  margin: 0 auto;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  @include phones($phones){
+
+    flex-flow: column;
+  }
+
+}
+
+.singin__btn-blue{
+  @include btn;
+  @include btn-blue;
+  width: 223px;
+
+    @include phones($phones){
+      width: 100%;
+      margin-bottom: 114px;
+    }
+}
+
+.singin__btn-white{
+  display: none;
+  @include phones($phones){
+    width: 100%;
+    @include btn;
+    @include btn-white;
+
+  }
+
+}
+
+.signin__forget-link{
+  font-weight: 600;
+  line-height: normal;
+  font-size: 12px;
+  color: #000000;
+
+  &:hover{
+    color: #75869A;
+  }
+}
+
+.signin__text{
+  font-weight: 600;
+  line-height: normal;
+  font-size: 12px;
+  color: #000000;
+}

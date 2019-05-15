@@ -1,0 +1,168 @@
+.services {
+  display: flex;
+  flex-flow: column;
+
+  .menu__link--services {
+    border-bottom: 3px solid $blue;
+    color: $black;
+  }
+}
+
+.services__container{
+  display: flex;
+  flex-direction: column;
+}
+
+.services__list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 121px;
+
+  @include tablets($tablets){
+    margin-bottom:62px ;
+  }
+}
+
+.services__item{
+  width: 32%;
+  min-width: 378px;
+  height: 450px;
+  max-height: 500px;
+  margin-bottom: 44px;
+
+
+
+  @include desktop($desktop){
+   width: 48%;
+  }
+
+  @include interval($interval){
+    margin-bottom: 2%;
+    min-width: 320px;
+  }
+
+  @include tablets($tablets){
+    width: 100%;
+    height: 250px;
+    margin-bottom: 32px;
+    min-width: 284px;
+  }
+
+  @include phones($phones){
+    height: 150px;
+  }
+
+
+}
+
+.services__link{
+  display: flex;
+  flex-flow: column;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 5px;
+  transition: 0.7s ease-in-out;
+
+  &:hover{
+    background-size: 105%;
+  }
+
+
+  &_without-driver{
+    background: url(./assets/images/img/car-without-driver.png) center center no-repeat;
+    background-size: 100%;
+
+
+  }
+
+  &_with-driver{
+    background: url(./assets/images/img/car-with-driver.png) center center no-repeat;
+    background-size: 100%;
+  }
+
+  &_tractor{
+     background: url(./assets/images/img/tractor.png) center center no-repeat;
+     background-size: 100%;
+   }
+
+  &_van{
+    background: url(./assets/images/img/van.png) center center no-repeat;
+    background-size: 100%;
+  }
+
+  &_vans{
+    background: url(./assets/images/img/van-2.png) center center no-repeat;
+    background-size: 100%;
+  }
+
+  &_cortege {
+    background: url(./assets/images/img/cortege.png) center center no-repeat;
+    background-size: 100%;
+  }
+}
+
+.services__text{
+  position: absolute;
+  left: 68px;
+  top: 62px;
+
+  @include tablets($tablets){
+    top: 50px ;
+    left: 36px;
+  }
+
+  @include phones($phones){
+    top: 18px ;
+    left: 16px;
+  }
+}
+
+.services__img{
+  width: 100%;
+}
+
+.services__title{
+  font-weight: bold;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: $white;
+
+  @include tablets($tablets){
+    font-size: 14px;
+    margin-bottom: 23px;
+  }
+}
+
+.services__count{
+  font-weight: bold;
+  font-size: 80px;
+  text-transform: uppercase;
+  color: $white;
+
+  @include tablets($tablets){
+    font-size: 36px;
+  }
+}
+
+.services__subtext{
+  font-weight: 600;
+  font-size: 12px;
+  color: $white;
+
+
+}
+
+.services__main-title{
+  font-weight: bold;
+  font-size: 24px;
+  color: $black;
+  margin: 44px auto;
+
+  @include tablets($tablets){
+    display: none;
+  }
+}

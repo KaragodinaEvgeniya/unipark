@@ -1,0 +1,29 @@
+main.main-content
+    h1.main-content__title лучшее предложение
+    .main-content__header
+        button.main-content__filter(id="openFilter")
+            .main-content__filter-icon
+            span Фильтр
+        p.main-content__results Найдено результатов&nbsp;
+            span (138)
+        ul.main-content__list
+            li.main-content__item
+                select.main-content__select
+                    option(value='' selected hidden disabled) Сортировать по
+                    option(value='2') Цене
+                    option(value='2') Рейтингу
+                select.main-content__select-interval
+                    option(value='' selected hidden disabled) Сортировать
+                    option(value='2') Цене
+                    option(value='2') Рейтингу
+            li.main-content__item
+                button.main-content__elem(id='offers-close')
+                    //+icon('list-active','main-content__icon')
+                    +icon('list','main-content__icon')
+            li.main-content__item
+                button.main-content__elem(id='offers-list-close')
+                    //+icon('card-active','main-content__icon')
+                    +icon('card','main-content__icon')
+    include ../common/offers.pug
+    include ../common/offers-list.pug
+include ../common/mobile-filter.pug

@@ -1,0 +1,284 @@
+.contact {
+  display: flex;
+  flex-flow: column;
+  position: relative;
+
+  .menu__link--contact {
+    border-bottom: 3px solid $blue;
+    color: $black;
+  }
+
+  .header--about {
+    margin-bottom: 0;
+  }
+}
+
+.contact__map{
+  position: absolute;
+  top: 90px;
+  left: 0;
+  right: 0;
+  filter: grayscale(1);
+
+  @include tablets($tablets){
+    top: 450px;
+    height: 330px;
+  }
+}
+
+.contact__our{
+  width: 467px;
+  height: 462px;
+  background: rgba(36, 154, 243, 0.8);
+  padding: 35px 62px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  z-index: 1;
+  margin-left: 10px;
+
+  @include tablets($tablets){
+    width: 100%;
+    height: 376px;
+    padding: 23px 26px 0;
+    margin-left: 0;
+    margin-bottom: 343px;
+  }
+}
+
+.contact__info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 136px;
+}
+
+.contact__container{
+  max-width: 1920px;
+  width: 95%;
+  min-height: 462px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+
+  @include tablets($tablets){
+    width: 90%;
+  }
+}
+
+.contact__socials{
+  display: flex;
+  justify-content: left;
+
+  & > *{
+    margin-right: 18px;
+  }
+}
+
+.contact__social-link{
+  display: block;
+}
+
+.contact__title{
+  line-height: 59px;
+  font-size: 36px;
+  color: white;
+  margin-bottom: 23px;
+
+  @include tablets($tablets){
+    font-size: 30px;
+  }
+
+  @include phones($phones){
+    font-size: 24px;
+  }
+}
+
+.contact__address,
+.contact__tel{
+  @include OpenSans-Regular;
+  font-size: 16px;
+  color: $white;
+  margin-bottom: 31px;
+}
+
+.contact__tel,
+.contact__email{
+  &:hover{
+    color: black;
+  }
+}
+
+.contact__email{
+  display: flex;
+  align-items: center;
+  transition:  0.4s ease-in-out;
+
+  &::before{
+    content: '';
+    width: 22px;
+    height: 13px;
+    background: svg-load('email.svg', fill=$white) center center no-repeat;
+    background-size: 100%;
+    margin-right: 15px;
+    transition:  0.4s ease-in-out;
+  }
+
+  &:hover{
+    color: black;
+    &::before{
+      background: svg-load('email.svg', fill=$black) center center no-repeat;
+    }
+  }
+}
+
+.contact__tel{
+  display: flex;
+  align-items: center;
+  transition:  0.4s ease-in-out;
+
+  &::before{
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: svg-load('phone.svg', fill=$white) center center no-repeat;
+    background-size: 100%;
+    margin-right: 15px;
+    transition:  0.4s ease-in-out;
+  }
+
+  &:hover{
+    color: black;
+    &::before{
+      content: '';
+      width: 16px;
+      height: 16px;
+      background: svg-load('phone.svg', fill=$black) center center no-repeat;
+      background-size: 100%;
+    }
+  }
+}
+
+.contact__address{
+  display: flex;
+  align-items: center;
+
+
+  &::before{
+    content: '';
+    width: 26px;
+    height: 26px;
+    background: svg-load('city.svg', fill=$white) center center no-repeat;
+    background-size: 100%;
+    margin-right: 15px;
+
+    @include tablets($tablets){
+      width: 13px;
+      height: 26px;
+    }
+
+    @include phones($phones){
+      width: 24px;
+      height: 26px;
+    }
+  }
+}
+
+.contact__email{
+  margin-bottom: 61px;
+  font-size: 16px;
+  color: white;
+}
+
+.contact__btn{
+  @include btn;
+  @include btn-blue;
+  width: 223px;
+  margin: 0 auto;
+
+  @include tablets($tablets) {
+    width: 250px;
+    margin-top: 17px;
+
+  }
+}
+
+.contact__booking{
+  min-height: 530px;
+  z-index: 10;
+
+  .booking__input-row{
+    width: 100%;
+  }
+
+  .booking__input-group{
+    justify-content: center;
+  }
+
+  @include tablets($tablets){
+    width: 90%;
+    min-height: 446px;
+
+    .booking__content{
+      padding: 26px 17px 0 17px;
+    }
+
+    .booking__input-row{
+      flex-flow: column;
+      margin-bottom: 0;
+    }
+
+    .booking__input{
+      margin-bottom: 17px;
+      margin-right: 0;
+    }
+  }
+}
+
+.contact__socials{
+  display: flex;
+
+  height: 30px;
+ }
+.contact__list{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.contact__item{
+  display: flex;
+}
+
+.contact__elem{
+  display: flex;
+  width: 30px;
+  height: 30px;
+  border-radius:50%;
+  background-color: $white;
+  align-items: center;
+  justify-content: center;
+  margin-right: 25px;
+  transition:  0.3s ease-in-out;
+
+
+  &:hover{
+    background-color: $lightgrey;
+  }
+}
+
+.contact__instagram{
+  width: 60%;
+  height: 60%;
+}
+
+.contact__whatsapp{
+  width: 60%;
+  height: 60%;
+}
+
+.contact__facebook {
+  width: 60%;
+  height: 60%;
+}

@@ -1,0 +1,56 @@
+extends ../auth.layout.pug
+
+block content
+    .wrapper
+        include ../common/header.pug
+        .content
+            .panel__phones
+                a.panel__return(href='/vendor-registration-step-1.html')
+                    +icon('arrow','panel__arrow')
+                    span Вернуться назад
+                .panel__header-title
+                    span Войти в личный кабинет
+                .panel__content.signin__content
+                    form#form.panel__form.form
+                        .panel__input-row
+                            input.form__input.panel__input(placeholder='Телефон' type='tel')
+                            label.form__password
+                                input#password.form__input.panel__input.panel__input_sms(placeholder='Пароль' type='password')
+                                span#eye.form__password-icon
+                        .panel__input-row.panel__input-row_space
+                            label.form__label(for='checkbox')
+                                input#checkbox.form__checkbox(type='checkbox' name='human')
+                                span.form__checkbox-icon
+                                    svg.form__checkbox-svg
+                                        path(id='check' d="M0.138462 4.4C0.0461539 4.32 0 4.2 0 4.12C0 4.04 0.0461539 3.92 0.138462 3.84L0.784615 3.28C0.969231 3.12 1.24615 3.12 1.43077 3.28L1.47692 3.32L4.01538 5.68C4.10769 5.76 4.24615 5.76 4.33846 5.68L10.5231 0.12H10.5692C10.7538 -0.04 11.0308 -0.04 11.2154 0.12L11.8615 0.68C12.0462 0.84 12.0462 1.08 11.8615 1.24L4.47692 7.88C4.38462 7.96 4.29231 8 4.15385 8C4.01538 8 3.92308 7.96 3.83077 7.88L0.230769 4.52L0.138462 4.4Z" fill="white")
+                                span.signin__text Запомнить
+                            a.signin__forget-link(href='#')
+                                span Забыли пароль?
+                    .signin__btn
+                        button.singin__btn-blue(form='form')
+                            span Войти
+                        button.singin__btn-white(form='form')
+                            span Зарегестрироваться
+            .container.panel.panel_signin.panel__container.signin__container
+                .panel__header.panel__header_small
+                    .panel__header-title
+                        span Войти в личный кабинет
+                .panel__content.signin__content
+                    form#form.panel__form.form
+                        .panel__input-row
+                            input.form__input.panel__input(placeholder='Телефон' type='tel')
+                            label.form__password
+                                input#password.form__input.panel__input.panel__input_sms(placeholder='Пароль' type='password')
+                                span#eye.form__password-icon
+                        .panel__input-row.panel__input-row_space
+                            label.form__label(for='checkbox')
+                                input#checkbox.form__checkbox(type='checkbox' name='human')
+                                span.form__checkbox-icon
+                                    svg.form__checkbox-svg
+                                        path(id='check' d="M0.138462 4.4C0.0461539 4.32 0 4.2 0 4.12C0 4.04 0.0461539 3.92 0.138462 3.84L0.784615 3.28C0.969231 3.12 1.24615 3.12 1.43077 3.28L1.47692 3.32L4.01538 5.68C4.10769 5.76 4.24615 5.76 4.33846 5.68L10.5231 0.12H10.5692C10.7538 -0.04 11.0308 -0.04 11.2154 0.12L11.8615 0.68C12.0462 0.84 12.0462 1.08 11.8615 1.24L4.47692 7.88C4.38462 7.96 4.29231 8 4.15385 8C4.01538 8 3.92308 7.96 3.83077 7.88L0.230769 4.52L0.138462 4.4Z" fill="white")
+                                span.signin__text Запомнить
+                            a.signin__forget-link(href='#')
+                                span Забыли пароль?
+                    .signin__btn
+                        button.singin__btn-blue(form='form')
+                            span Войти

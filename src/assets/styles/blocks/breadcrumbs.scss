@@ -1,0 +1,27 @@
+.breadcrumbs__item {
+  position: relative;
+  margin-right: 25px;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: svg-load('arrow-right.svg') center center no-repeat;
+    width: 14px;
+    height: 7px;
+    top: 9px;
+    right: -19px;
+  }
+  &:last-child:after {
+    content: '';
+    background: initial;
+  }
+}
+
+.breadcrumbs__link {
+  font-size: 14px;
+  color: #75869A;
+  &_active {
+    color: #249AF3;
+  }
+}

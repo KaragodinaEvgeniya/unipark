@@ -1,0 +1,150 @@
+.main-content{
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  @include phones($phones){}
+  width: 90%;
+}
+
+.main-content__title{
+  @include OpenSans-Regular;
+  font-weight: 600;
+  font-size: 20px;
+  color: $black;
+  text-transform: uppercase;
+}
+
+.main-content__header{
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid $gray;
+
+  @include tablets($tablets){
+    border-bottom:none;
+  }
+}
+
+.main-content__results{
+  @include OpenSans-Regular;
+  font-size: 14px;
+  color: $black;
+  width: 30%;
+    span{
+      color: $darkgray;
+    }
+
+  @include interval($interval){
+    display: none;
+  }
+}
+
+.main-content__list{
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+}
+
+.main-content__item{
+  display: flex;
+  align-items: center;
+  &:after{
+    content: '';
+    display: block;
+    height: 17px;
+    width: 1px;
+    background-color: $gray;
+    margin: 0   27px;
+
+    @include tablets($tablets){
+     display: none;
+    }
+  }
+
+  &:last-child:after{
+    content: '';
+    width: 0;
+    height: 0;
+    display: none;
+  }
+
+}
+
+.main-content__select{
+  @include form-select;
+  height: 30px;
+  margin: 0;
+  color: black;
+  min-width: 223px;
+  flex: initial;
+
+  @include interval($interval){
+    display: none;
+  }
+}
+
+.main-content__select-interval{
+  display: none;
+  @include interval($interval){
+    @include form-select;
+    height: 40px;
+    width: 142px;
+    padding: 5px 30px 5px 15px;
+    margin: 0;
+    color: black;
+    flex: initial;
+  }
+
+}
+
+.main-content__elem{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border: none;
+  background:none;
+  text-decoration: none;
+  outline: $white;
+
+
+  @include tablets($tablets){
+    display: none;
+  }
+
+}
+
+.main-content__icon{
+  width: 100%;
+  height: 100%;
+
+
+
+}
+
+.main-content__filter{
+  display: none;
+
+  @include interval($interval){
+    @include btn;
+    @include btn-white;
+    width: 127px;
+    height: 40px;
+    padding: 12px 0 12px 0;
+    align-items: center;
+    justify-content: center;
+  }
+
+}
+
+.main-content__filter-icon{
+  background: svg-load('filter.svg', fill=$blue) center center no-repeat;
+  width: 17px;
+  height: 16px;
+  margin-right: 8px;
+
+}

@@ -1,0 +1,218 @@
+.offers-list{
+  display: none;
+
+  &.offers-list--active{
+    display: flex;
+    flex-flow: column;
+
+    @include tablets($tablets){
+      display: none;
+    }
+  }
+
+
+}
+
+.offers-list__item{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 26px 0;
+  border-bottom: 1px solid #B8C1CB;
+}
+
+.offers-list__info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 45%;
+  margin: 0 0 0 28px;
+
+  &_car{
+    width: 100%;
+    margin: 0 ;
+    padding: 0 5% 40px 5%;
+
+    @include phones($phones){
+      padding-bottom: 0;
+    }
+  }
+}
+
+.offers-list__car-desc{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.offers-list__photo{
+  border-radius: 5px;
+  width: 30%;
+  height: 182px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.offers-list__img{
+  width: 100%;
+}
+
+.offers-list__title{
+  color: $blue;
+  font-size: 18px;
+  font-weight: bold;
+  &_black {
+    color: $black;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  @include phones($phones){
+    font-size: 14px;
+  }
+}
+
+.offers-list__driver-name{
+  font-size: 16px;
+  color: $black;
+
+  @include phones($phones){
+    font-size: 14px;
+  }
+}
+
+.offers-list__city{
+  @include phones($phones){
+    font-size: 14px;
+  }
+}
+
+.offers-list__sub-text{
+  font-size: 10px;
+  color: $darkgray;
+}
+
+.offers-list__rating.rating{
+  display: flex;
+}
+
+.offers-list__price{
+  font-weight: bold;
+  line-height: normal;
+  font-size: 20px;
+  color: $blue;
+
+  @include phones($phones){
+    font-size: 24px;
+  }
+
+}
+
+.offers-list__actions{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 20%;
+  padding: 0 0 0 3%;
+  border-left: 1px solid $gray;
+}
+
+.offers-list__btns{
+  width: 100%;
+
+}
+
+.offers-list__btns-row{
+  display: flex;
+  justify-content: space-between;
+
+@include desktop($desktop){
+    flex-flow: column;
+  }
+
+  @include interval($interval){
+   flex-flow: wrap;
+  }
+
+  @include phones($phones){
+    flex-flow: column;
+  }
+}
+
+.offers-list__btns-white{
+  @include btn;
+  @include btn-white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 35px;
+  width: 100%;
+  margin-bottom: 13px ;
+
+  &_car{
+    width: 47% ;
+
+    @include desktop($desktop){
+      width: 100%;
+
+    }
+
+    @include interval($interval){
+      width: 47%;
+    }
+
+    @include phones($phones){
+      width: 100%;
+    }
+  }
+}
+
+.offers-list__btns-blue{
+  @include btn;
+  @include btn-blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 35px;
+  width: 100%;
+  &_car{
+    width: 47% ;
+
+    @include desktop($desktop){
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    @include interval($interval){
+      width: 47%;
+    }
+
+    @include phones($phones){
+      width: 100%;
+    }
+  }
+}
+.offers-list__city{
+  display: flex;
+
+  align-items: center;
+  & > *{
+    margin-right: 5px;
+  }
+
+}
+
+.offers-list__desc{
+  line-height: 23px;
+  font-size: 14px;
+  color: $darkgray;
+
+}

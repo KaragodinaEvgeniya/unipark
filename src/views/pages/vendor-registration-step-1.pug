@@ -1,0 +1,78 @@
+extends ../auth.layout.pug
+
+block content
+    .wrapper
+        include ../common/header.pug
+        .content
+            .panel__phones
+                a.panel__return(href='/choose-user-type.html')
+                    +icon('arrow','panel__arrow')
+                    span Вернуться назад
+                .panel__header-title
+                    span Регистрация поставщика
+                ul.panel__steps.steps.steps__list
+                    li.steps__item.steps__item_active
+                        span 1
+                    li.steps__item
+                        span  2
+                .panel__content
+                    .panel__content-title.title
+                        span.panel__title-bold Шаг 1. &nbsp
+                        span Анкетные данные
+                    form.panel__form.form
+                        .panel__input-row
+                            input.form__input.panel__input(placeholder='Имя' type='text')
+                            input.form__input.panel__input(placeholder='Фамилия' type='text')
+                        .panel__input-row
+                            select.form__select.panel__input
+                                option(value='' disabled selected hidden) Город
+                                option(value='1') Астана
+                                option(value='2') Алматы
+                            input.form__input.panel__input(placeholder='Телефон' type='tel')
+                        label.form__label(for='checkbox')
+                            input.form__checkbox(type='checkbox' name='human')
+                            span.form__checkbox-icon
+                                svg.form__checkbox-svg
+                                    path(id='check' d="M0.138462 4.4C0.0461539 4.32 0 4.2 0 4.12C0 4.04 0.0461539 3.92 0.138462 3.84L0.784615 3.28C0.969231 3.12 1.24615 3.12 1.43077 3.28L1.47692 3.32L4.01538 5.68C4.10769 5.76 4.24615 5.76 4.33846 5.68L10.5231 0.12H10.5692C10.7538 -0.04 11.0308 -0.04 11.2154 0.12L11.8615 0.68C12.0462 0.84 12.0462 1.08 11.8615 1.24L4.47692 7.88C4.38462 7.96 4.29231 8 4.15385 8C4.01538 8 3.92308 7.96 3.83077 7.88L0.230769 4.52L0.138462 4.4Z" fill="white")
+                            span Принять оферту
+                    .panel__btns
+                        a.panel__btn-blue(href='/vendor-registration-step-2.html')
+                            span Продолжить
+            .container.content__container.panel
+                .panel__header
+                    .panel__header-pic
+                        +image('../images/img/car-icon.png')
+                    .panel__header-title
+                        span Регистрация поставщика
+                    ul.panel__header-steps.steps.steps__list
+                        li.steps__item.steps__item_active
+                            span  1
+                        li.steps__item
+                            span  2
+                        li.steps__item
+                            span  3
+                .panel__content
+                    .panel__content-title.title
+                        span.panel__title-bold Шаг 1. &nbsp
+                        span Анкетные данные
+                    form.panel__form.form
+                        .panel__input-row
+                            input.form__input.panel__input(placeholder='Имя' type='text')
+                            input.form__input.panel__input(placeholder='Фамилия' type='text')
+                        .panel__input-row
+                            select.form__select.panel__input#select
+                                option(value='' disabled selected hidden) Город
+                                option(value='1') Астана
+                                option(value='2') Алматы
+                            input.form__input.panel__input(placeholder='Телефон' type='tel')
+                        label.form__label(for='checkbox')
+                            input#checkbox.form__checkbox(type='checkbox' name='human')
+                            span.form__checkbox-icon
+                                svg.form__checkbox-svg
+                                    path(id='check' d="M0.138462 4.4C0.0461539 4.32 0 4.2 0 4.12C0 4.04 0.0461539 3.92 0.138462 3.84L0.784615 3.28C0.969231 3.12 1.24615 3.12 1.43077 3.28L1.47692 3.32L4.01538 5.68C4.10769 5.76 4.24615 5.76 4.33846 5.68L10.5231 0.12H10.5692C10.7538 -0.04 11.0308 -0.04 11.2154 0.12L11.8615 0.68C12.0462 0.84 12.0462 1.08 11.8615 1.24L4.47692 7.88C4.38462 7.96 4.29231 8 4.15385 8C4.01538 8 3.92308 7.96 3.83077 7.88L0.230769 4.52L0.138462 4.4Z" fill="white")
+                            span Принять оферту
+                    .panel__btns
+                        a.panel__btn-gray(href='/choose-user-type.html')
+                            span Назад
+                        a.panel__btn-blue(href='/vendor-registration-step-2.html')
+                            span Продолжить

@@ -1,0 +1,37 @@
+header.header.header--about
+    .header__container
+        .header__left
+            a.header__logo(href='/index.html')
+        nav.header__center
+            ul.menu.menu__list.header__menu
+                li.menu__item
+                    a(href='/index.html').menu__link.menu__link--index
+                        span Автомобили
+                li.menu__item
+                    a(href='/services.html').menu__link.menu__link--services
+                        span Услуги
+                li.menu__item
+                    a(href='/about.html').menu__link.menu__link--about
+                        span О проекте
+                li.menu__item
+                    a(href='/contact.html').menu__link.menu__link--contact
+                        span Контакты
+        .actions.header__actions
+            a(href='#').select
+                span.select__text Астана
+                .select__arrow
+                    +icon('arrow-down','select__arrow-down-img')
+            btn.actions__btn
+                +icon('account','actions__account')
+            .divider.divider_vertical
+            btn.actions__interval
+                +icon('account','actions__account')
+            button.actions__hamburger
+                .header__line.header__line--top
+                .header__line.header__line--middle
+                .header__line.header__line--bottom
+            .btn-group
+                a.btn-group__black(href='/choose-user-type.html')
+                    span Регистрация
+                a.btn-group__blue(href='/signin.html')
+                    span Войти

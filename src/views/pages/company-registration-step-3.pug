@@ -1,0 +1,95 @@
+extends ../auth.layout.pug
+
+block content
+    .wrapper
+        include ../common/header.pug
+        .content
+            .panel__phones
+                a.panel__return(href='/company-registration-step-2.html')
+                    +icon('arrow','panel__arrow')
+                    span Вернуться назад
+                .panel__header-title
+                    span Регистрация поставщика
+                ul.panel__steps.steps.steps__list
+                    li.steps__item
+                        span
+                            +icon('done','steps__done')
+                    li.steps__item.steps__item_active.steps__item_steps
+                        span  3
+                .panel__content
+                    .panel__content-title.panel__content-title_supplier.title
+                        span.panel__title-bold Шаг 3. &nbsp
+                        span Данные компании
+                    form.panel__form.form
+                        .panel__input-row.panel__input-row_step-3
+                            input.form__input.panel__input_step-3(placeholder='БИН / ИИН' type='text')
+                            select.form__select.form__select_no_spacing.panel__input.panel__input_step-3
+                                option(value='' disabled selected hidden) Тип организации
+                                option(value='1') commercial
+                                option(value='2') non commercial
+                        .panel__input-row.panel__input-row_step-3
+                            input.form__input.panel__input_step-3(placeholder='Фамилия' type='text')
+                            select.form__select.form__select_no_spacing.panel__input.panel__input_step-3
+                                option(value='' disabled selected hidden) Выберите банк
+                                option(value='1') Bank 1
+                                option(value='2') Bank 2
+                        .panel__input-row.panel__input-row_step-3
+                            input.form__input.panel__input_step-3(placeholder='Ф.И.О директора' type='text')
+                            input.form__input.panel__input_step-3(placeholder='E-mail' type='text')
+                        .panel__input-row.panel__input-row_step-3
+                            input.form__input.panel__input_step-3(placeholder='Расчетный счет' type='text')
+                            input.form__input.panel__input_step-3(placeholder='Корр. счет' type='text')
+                        .panel__input-row.panel__input-row_step-3
+                            input.form__input.panel__input_step-3(placeholder='Юр. адрес' type='text')
+                            input.form__input.panel__input_step-3(placeholder='Фактический адрес' type='text')
+                    .panel__btns
+                        a.panel__btn-blue(href='/company-registration-step-4.html')
+                            span Продолжить
+            .container.content__container.panel
+                .panel__header
+                    .panel__header-pic
+                        +image('../images/img/company-round.png')
+                    .panel__header-title
+                        span Регистрация компании
+                    ul.panel__header-steps.steps.steps__list
+                        li.steps__item
+                            span
+                                +icon('done','steps__done')
+                        li.steps__item
+                            span
+                                +icon('done','steps__done')
+                        li.steps__item.steps__item_active.steps__item_steps
+                            span  3
+                .panel__content
+                    .panel__content-title.panel__content-title_supplier.title
+                        span.panel__title-bold Шаг 3. &nbsp
+                        span Данные компании
+                    form.panel__form.form
+                        .panel__input-row.panel__input-row_step-3
+                            input.form__input.panel__input_step-3(placeholder='БИН / ИИН' type='text')
+                            select.form__select.form__select_no_spacing.panel__input.panel__input_step-3
+                                option(value='' disabled selected hidden) Тип организации
+                                option(value='1') commercial
+                                option(value='2') non commercial
+                        .panel__input-row.panel__input-row_step-3
+                            input.form__input.panel__input_step-3(placeholder='Фамилия' type='text')
+                            select.form__select.form__select_no_spacing.panel__input.panel__input_step-3
+                                option(value='' disabled selected hidden) Выберите банк
+                                option(value='1') Bank 1
+                                option(value='2') Bank 2
+                        .panel__input-row.panel__input-row_step-3
+                            input.form__input.panel__input_step-3(placeholder='Ф.И.О директора' type='text')
+                            input.form__input.panel__input_step-3(placeholder='E-mail' type='text')
+                        .panel__input-row.panel__input-row_step-3
+                            input.form__input.panel__input_step-3(placeholder='Расчетный счет' type='text')
+                            input.form__input.panel__input_step-3(placeholder='Корр. счет' type='text')
+                        .panel__input-row.panel__input-row_step-3
+                            input.form__input.panel__input_step-3(placeholder='Юр. адрес' type='text')
+                            input.form__input.panel__input_step-3(placeholder='Фактический адрес' type='text')
+                    .panel__btns
+                        a.panel__btn-gray(href='/company-registration-step-2.html')
+                            span Назад
+                        a.panel__btn-blue(href='/company-registration-step-4.html')
+                            span Продолжить
+
+

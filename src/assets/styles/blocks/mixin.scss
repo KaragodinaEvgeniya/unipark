@@ -1,0 +1,272 @@
+$tablets:768px;
+$desktops:1200px;
+
+$blue:#249AF3;
+$white:#ffffff;
+$black:#000000;
+$gray:#B8C1CB;
+$darkgray:#75869A;
+$lightgrey:#DDE5EB;
+
+
+
+
+@mixin roboto-regular{
+    font-family: 'Roboto-Regular', Helvetica, sans-serif;
+    font-weight: normal;
+    color: $gray;
+    font-size: 16px;
+}
+
+
+@mixin roboto-bold{
+    font-family: 'Roboto-Bold', Helvetica, sans-serif;
+    font-weight: 700;
+    color: $gray;
+    font-size: 16px;
+}
+
+@mixin OpenSans-Regular{
+    font-family: 'OpenSans-Regular', Helvetica, sans-serif;
+    font-weight: normal;
+    color: $gray;
+    font-size: 16px;
+    line-height: normal;
+}
+
+@mixin OpenSans-Bold{
+    font-family: 'OpenSans-Bold', Helvetica, sans-serif;
+    font-weight: 700;
+    color: $gray;
+    font-size: 16px;
+    line-height: normal;
+}
+
+@mixin btn-black{
+    width: 121px;
+    border: 1px solid $gray;
+    color: $black;
+
+    &:hover{
+        background: $black;
+        color: $white;
+        border: 1px solid transparent;
+    }
+}
+
+@mixin  btn{
+    border-radius: 5px;
+    padding: 6px 11px;
+    min-width: 102px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+    @include OpenSans-Regular;
+    font-weight: 600;
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid $gray;
+    color: $black;
+
+    &:hover {
+        background: $blue;
+        color: $white;
+        border: 1px solid transparent;
+    }
+}
+
+@mixin  btn-blue{
+    background: $blue;
+    color: $white;
+    border: 1px solid transparent;
+    transition:  0.4s ease-in-out;
+
+
+    &:hover{
+        background: transparent;
+        color: $blue;
+        border: 1px solid $blue;
+    }
+}
+
+@mixin  btn-gray{
+    background: $gray;
+    color: $white;
+    border: 1px solid transparent;
+    transition:  0.4s ease-in-out;
+
+
+    &:hover{
+        background: transparent;
+        color: $gray;
+        border: 1px solid $gray;
+    }
+}
+
+@mixin  btn-white{
+    background: $white;
+    color: $blue;
+    border: 1px solid $blue;
+    transition:  0.4s ease-in-out;
+
+
+    &:hover{
+        background: #daecf8;
+        color:$blue;
+        border: 1px solid $blue;
+    }
+}
+
+@mixin form-select{
+    display: flex;
+    background: svg-load('arrow-down-gray.svg', fill=$darkgray) center center no-repeat;
+    justify-content: center;
+    border-radius: 5px;
+    height: 40px;
+    padding: 5px 21px;
+    border: 1px solid $gray;
+    outline: none;
+   @include OpenSans-Regular;
+    font-size: 14px;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+    background-position: right 13px center;
+    padding-right: 30px;
+    color: $gray;
+    transition:  0.4s ease-in-out;
+
+    &:hover{
+        background:svg-load('arrow-down-gray.svg', fill=$blue) center center no-repeat;
+        cursor: pointer;
+        background-position: right 13px center;
+        border: 1px solid $blue;
+
+    }
+
+    &:focus{
+        background:svg-load('arrow-down-gray.svg', fill=$blue) center center no-repeat;
+        cursor: pointer;
+        background-position: right 13px center;
+        border: 1px solid $blue;
+
+    }
+
+}
+
+@mixin form-datepicker-icon{
+    background: svg-load('calendar.svg', fill=$gray) no-repeat center;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    border-left: 1px solid $gray;
+    cursor: pointer;
+}
+
+@mixin filter{
+    width: 90%;
+    margin-bottom: 18px;
+    color: $black;
+    margin-right: 0;
+}
+
+@mixin form-search{
+    border-radius: 5px 0 0 5px;
+    padding: 10px 21px;
+    border: 1px solid $gray;
+    outline: none;
+    @include OpenSans-Regular;
+    font-size: 14px;
+    width: 100%;
+
+    margin: 0;
+    height: 35px;
+
+
+    &:focus{
+        border: 1px solid $blue;
+    }
+
+    &_range{
+        width: 127px;
+        flex: initial;
+    }
+
+    &_icon{
+        padding-right: 61px;
+    }
+
+    &::placeholder{
+        color: $gray;
+    }
+
+}
+
+@mixin form-search-button{
+    width: 52px;
+    height: 35px;
+    border: 1px solid $gray;
+    border-left: 0;
+    border-radius: 0 5px 5px 0;
+    outline: none;
+    cursor: pointer;
+    background: svg-load('search.svg', fill=$white) center center no-repeat;
+    transition:  0.4s ease-in-out;
+
+    &:hover, &_active{
+        background: svg-load('search.svg', fill=$blue) center center no-repeat;
+        border: 1px solid $blue;
+    }
+}
+
+@mixin form-label{
+    font-size: 12px;
+    color: #000;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    font-family: 'OpenSans', sans-serif;
+
+    &_type_text{
+        display: flex;
+        align-items: center;
+        height: 45px;
+        border-radius: 4px;
+        overflow: hidden;
+        padding-right: 20px;
+        padding-left: 20px;
+        width: 100%;
+    }
+
+    &_type_radio{
+        margin-right: 30px;
+    }
+}
+
+@mixin form-input{
+    display: flex;
+    border-radius: 5px;
+    height: 40px;
+    padding: 10px 21px;
+    border: 1px solid #B8C1CB;
+    outline: none;
+    font-size: 14px;
+    @include OpenSans-Regular;
+    width: 100%;
+    color: $darkgray;
+
+    &:focus{
+        border: 1px solid $gray  ;
+    }
+}
+
+
+
+

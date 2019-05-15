@@ -1,0 +1,49 @@
+.swiper-container { // fixme class names
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+}
+
+.swiper-slide{
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+.gallery-top {
+  height: 80%;
+  width: 100%;
+
+  @include tablets($tablets){
+    height: 100%;
+  }
+}
+.gallery-thumbs {
+  //height: 25%;
+  display: block;
+  box-sizing: border-box;
+  padding: 10px 0;
+  overflow: hidden;
+  height: 115px;
+
+  @include tablets($tablets){
+    display: none;
+  }
+}
+.gallery-thumbs .swiper-slide {
+  height: 100%;
+}
+
+.swiper-wrapper{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+
+}

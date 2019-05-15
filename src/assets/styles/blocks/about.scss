@@ -1,0 +1,96 @@
+.about {
+  display: flex;
+  flex-flow: column;
+
+  .header--about {
+    margin-bottom: 0;
+  }
+
+  .menu__link--about {
+    border-bottom: 3px solid $blue;
+    color: $black;
+  }
+
+  input[type='checkbox']:checked + .checkbox__checked--about {
+    &:after {
+      background: rgba(255, 255, 255, 1);
+    }
+  }
+}
+.about__container{
+  display: flex;
+  flex-flow: column;
+  width: 100vw;
+  min-height: 589px;
+  background: url(./assets/images/img/about-bg.jpg) no-repeat top right;
+  background-size: 50%;
+  padding: 136px 0 0 15%;
+
+  @include tablets($tablets){
+    min-height: 400px;
+    padding: 20px 0 0 5%;
+  }
+
+  @include phones($phones){
+    background: url(./assets/images/img/about-bg-phones.jpg) no-repeat bottom right;
+    background-size: 70%;
+    min-height: 448px;
+    margin-bottom: 75px;
+  }
+}
+
+
+
+.about__text{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  & > *{
+    margin-bottom: 40px;
+  }
+}
+
+.about__link{
+  width: 223px;
+}
+
+.about__desc{
+  max-width: 500px;
+  font-weight: 600;
+  line-height: 41px;
+  font-size: 20px;
+  color: #75869A;
+
+
+  @include phones($phones){
+    width: 90%;
+    font-size: 14px;
+    line-height: 23px;
+  }
+}
+
+.about__title{
+  font-weight: 600;
+  line-height: normal;
+  font-size: 36px;
+  color: #000000;
+
+
+  @include phones($phones){
+    font-size: 24px;
+  }
+}
+
+.about__btn{
+  @include btn;
+  @include btn-blue;
+  width: 223px;
+  height: 40px;
+
+
+  @include phones($phones){
+    width: 183px;
+  }
+
+}

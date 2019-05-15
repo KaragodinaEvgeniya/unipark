@@ -1,0 +1,86 @@
+extends ../auth.layout.pug
+
+block content
+    .wrapper
+        include ../common/header.pug
+        .content
+            .panel__phones
+                h2.panel__title-phones Выберите тип пользователя
+                form.user-type.user-type__form.form
+                    ul.user-type__list
+                        li.user-type__item
+                            label.user-type__label
+                                .user-type__logo
+                                    +image('../images/img/car-w.png')
+                                .user-type__title
+                                    span Поставщик
+                                .user-type__text
+                                    p Поставщик – Владелец транспортного средства, который размещает на сайте информацию о своих услугах, стоимости услуг. Получает заказы и выполняет их в соответствии с условиями заказа. Получает оплату за оказанные услуги от Заказчика.
+                                input.user-type__radio.form__radio(type='radio' name='user-type')
+                                .user-type__item-border
+                        li.user-type__item
+                            label.user-type__label
+                                .user-type__logo.user-type__logo_client
+                                    +image('../images/img/client.png')
+                                .user-type__title
+                                    span Клиент
+                                .user-type__text
+                                    p Клиент – Заказчик услуги, который ищет транспорт для своих потребностей. Может размещать заказы на сайте, выбирать транспорт по своим требованиям, оставлять отзывы и оценки по оказанным услугам. Оплачивает услуги Поставщика.
+                                input.user-type__radio.form__radio(type='radio' name='user-type')
+                                .user-type__item-border
+                        li.user-type__item
+                            label.user-type__label
+                                .user-type__logo
+                                    +image('../images/img/company.png')
+                                .user-type__title
+                                    span Компания
+                                .user-type__text
+                                    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
+                                input.user-type__radio.form__radio(type='radio' name='user-type')
+                                .user-type__item-border
+                    ul.user-type__circle-list
+                        li.user-type__circle-item
+                        li.user-type__circle-item
+                        li.user-type__circle-item
+                    .user-type__btn
+                        a.user__btn(href='#')
+                            span Продолжить
+            .container.panel.panel__container
+                .panel__header.panel__header_small
+                    .panel__header-title
+                        span Выберите тип пользователя
+                form.user-type.user-type__form.form
+                    ul.user-type__list
+                        li.user-type__item
+                            label.user-type__label
+                                .user-type__logo
+                                    +image('../images/img/car-w.png')
+                                .user-type__title
+                                    span Поставщик
+                                .user-type__text
+                                    p Поставщик – Владелец транспортного средства, который размещает на сайте информацию о своих услугах, стоимости услуг. Получает заказы и выполняет их в соответствии с условиями заказа. Получает оплату за оказанные услуги от Заказчика.
+                                input.user-type__radio.form__radio(type='radio' name='user-type')
+                                .user-type__item-border
+                        li.user-type__item
+                            label.user-type__label
+                                .user-type__logo.user-type__logo_client
+                                    +image('../images/img/client.png')
+                                .user-type__title
+                                    span Клиент
+                                .user-type__text
+                                    p Клиент – Заказчик услуги, который ищет транспорт для своих потребностей. Может размещать заказы на сайте, выбирать транспорт по своим требованиям, оставлять отзывы и оценки по оказанным услугам. Оплачивает услуги Поставщика.
+                                input.user-type__radio.form__radio(type='radio' name='user-type')
+                                .user-type__item-border
+                        li.user-type__item
+                            label.user-type__label
+                                .user-type__logo
+                                    +image('../images/img/company.png')
+                                .user-type__title
+                                    span Компания
+                                .user-type__text
+                                    p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
+                                input.user-type__radio.form__radio(type='radio' name='user-type')
+                                .user-type__item-border
+                    .user-type__btn
+                        a.user__btn(href='#')
+                            span Продолжить
